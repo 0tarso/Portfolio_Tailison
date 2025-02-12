@@ -13,18 +13,18 @@ const Skills = () => {
 
         <div className='mb-5 pt-6'>
           <motion.span className='block w-fit text-white text-6xl font-bold max-sm:text-4xl'
-            initial={{ opacity: 0, translateX: "-200px" }}
-            animate={{ opacity: 1, translateX: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            style={{ willChange: "opacity, transform" }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+            style={{ willChange: "opacity" }}
           >Habilidades
           </motion.span>
 
           {/* Detalhe de layout */}
           <motion.div className='bg-zinc-100 mt-2'
             initial={{ width: "0px", height: 4, opacity: 0 }}
-            animate={{ opacity: 1, width: "90%" }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+            whileInView={{ opacity: 1, width: "90%" }}
+            transition={{ duration: 1, ease: "easeOut", delay: 1 }}
             style={{ willChange: "opacity" }}
           ></motion.div>
         </div>

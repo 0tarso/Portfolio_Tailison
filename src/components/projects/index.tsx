@@ -21,10 +21,10 @@ const Projects = () => {
         <div className='flex flex-col items-start mb-12'>
 
           <motion.span className='block w-fit text-white text-6xl font-bold max-sm:text-4xl'
-            initial={{ opacity: 0, translateX: "-200px" }}
-            whileInView={{ opacity: 1, translateX: 0 }}
-            transition={{ duration: 1 }}
-            style={{ willChange: "opacity, transform" }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            style={{ willChange: "opacity" }}
           >Projetos Desenvolvidos
           </motion.span>
 
@@ -33,7 +33,7 @@ const Projects = () => {
             initial={{ width: "0px", height: 4, opacity: 0 }}
             viewport={{ once: false }}
             whileInView={{ opacity: 1, width: "90%" }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
             style={{ willChange: "opacity" }}
           ></motion.div>
 
