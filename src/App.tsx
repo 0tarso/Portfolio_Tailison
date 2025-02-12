@@ -13,7 +13,7 @@ function App() {
     fetch('/api/wakatime')
       .then(res => res.json())
       .then(data => console.log(data))
-      .catch(error => console.log(error))
+      .catch(error => console.log(error + "Errrooooo"))
   })
 
   return (
