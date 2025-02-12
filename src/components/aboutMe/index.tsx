@@ -24,8 +24,8 @@ const AboutMe = () => {
           const rawData = dataResponse.data.data
 
           const wakaStats = {
-            dailyAverage: rawData.human_readable_daily_average,
-            weekAverage: rawData.human_readable_total,
+            dailyAverage: rawData.human_readable_daily_average.replace(/\s+/g, ""),
+            weekAverage: rawData.human_readable_total.replace(/\s+/g, ""),
           }
 
           console.log(wakaStats)
@@ -87,15 +87,15 @@ const AboutMe = () => {
 
                   <div className='flex justify-center items-center flex-col'>
                     <p className='text-zinc-200 font-medium max-sm:text-sm'>Código Diário</p>
-                    <span key={updateComponent} className='text-3xl font-bold text-zinc-100 max-lg:text-xl transition-all max-md:text-lg'>{wakaData && wakaData?.dailyAverage}</span>
+                    <span key={updateComponent} className='text-3xl font-bold text-zinc-100 max-lg:text-xl transition-all max-md:text-lg'>{wakaData ? wakaData?.dailyAverage : '...'}</span>
                   </div>
                   <div className=' flex justify-center items-center flex-col'>
                     <p className='text-zinc-200 font-medium max-sm:text-sm'>Código Semanal</p>
-                    <span className='text-3xl font-bold text-zinc-100 max-lg:text-xl transition-all max-md:text-lg'>{wakaData ? wakaData?.weekAverage : "Carregando"}</span>
+                    <span className='text-3xl font-bold text-zinc-100 max-lg:text-xl transition-all max-md:text-lg'>{wakaData ? wakaData.weekAverage : '...'}</span>
                   </div>
                   <div className=' flex justify-center items-center flex-col'>
                     <p className='text-zinc-200 font-medium max-sm:text-sm'>Projetos</p>
-                    <span className='text-3xl font-bold text-zinc-100 max-lg:text-xl transition-all max-md:text-lg'>2h49min</span>
+                    <span className='text-3xl font-bold text-zinc-100 max-lg:text-xl transition-all max-md:text-lg'>5</span>
                   </div>
                 </div>
               </div>
