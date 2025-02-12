@@ -88,6 +88,11 @@ const Header = () => {
 						onClick={() => handleHideMenu()}
 					>Habilidades<span className="hidden max-md:block text-sm text-zinc-600">{"<"}que desenvolvo{">"}</span></a>
 
+					<a className={`transition-all text-white border-b-2 text-center border-transparent text-md hover:cursor-pointer hover:border-green-700 hover:text-green-100 `}
+						href="#about"
+						onClick={() => handleHideMenu()}
+					>Sobre<span className="hidden max-md:block text-sm text-zinc-600">{"<"}que desenvolvo{">"}</span></a>
+
 					<a className={`transition-all text-white border-b-2 text-center border-transparent text-md hover:cursor-pointer hover:border-green-700 hover:text-green-100`}
 						onClick={() => handleHideMenu()}
 					>Contato<span className="hidden max-md:block text-sm  text-zinc-600">{"<"}para desenvolvermos juntos{">"}</span></a>

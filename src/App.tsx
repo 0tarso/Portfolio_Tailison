@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import Header from './components/header'
 import Hero from './components/hero'
 import Projects from './components/projects'
@@ -6,19 +5,22 @@ import ScrollLinked from './components/scrollLinked'
 import Skills from './components/skills'
 
 import { motion } from 'motion/react'
+import AboutMe from './components/aboutMe'
 
 function App() {
 
-  useEffect(() => {
-    fetch('/api/wakatime')
-      .then(res => res.json())
-      .then(data => console.log(data))
-      .catch(error => {
-        console.log(error + "Errrooooo")
-        console.log(error.message)
-        console.log(error.code)
-      })
-  })
+  // useEffect(() => {
+
+  // caminho correto na Vercel
+  // fetch('/api/wakatime')
+  //   .then(res => res.json())
+  //   .then(data => console.log(data))
+  //   .catch(error => {
+  //     console.log(error + "Errrooooo")
+  //     console.log(error.message)
+  //     console.log(error.code)
+  //   })
+
 
   return (
     <div className='max-md:overflow-x-clip'>
@@ -47,6 +49,10 @@ function App() {
         <Skills />
         <div className='bg-green-500 h-[400px] max-sm:h-[500px] w-full absolute top-0 -z-10' ></div>
       </motion.div>
+
+
+      <AboutMe />
+
 
 
 

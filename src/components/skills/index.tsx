@@ -9,7 +9,7 @@ const Skills = () => {
   return (
 
     <Container>
-      <section className='mt-20 h-screen relative' id='skills'>
+      <section className='mt-20 h-screen max-sm:h-full relative' id='skills'>
 
         <div className='mb-5 pt-6'>
           <motion.span className='block w-fit text-white text-6xl font-bold max-sm:text-4xl'
