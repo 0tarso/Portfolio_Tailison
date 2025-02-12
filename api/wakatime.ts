@@ -11,8 +11,8 @@ export default async function handler(_: VercelRequest, res: VercelResponse) {
 
 
     if (response.ok) {
-      const errorText = await response.text();  // Tente pegar o erro como texto
-      return res.status(response.status).json({ error: `Erro na requisição: ${errorText}` });
+      const data = await response.json();  // Tente pegar o erro como texto
+      return res.status(response.status).json({ data: data, response: response.status });
     }
 
     const contentType = response.headers.get('content-type');
