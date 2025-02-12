@@ -10,6 +10,6 @@ export default async function handler(_: VercelRequest, res: VercelResponse) {
 
     res.status(200).json(data);
   } catch (error) {
-    res.status(500).json({ error: `Erro ao obter dados do WakaTime ${error}` });
+    res.json({ error: `Erro ao obter dados do WakaTime ${error}` });
   }
 }
