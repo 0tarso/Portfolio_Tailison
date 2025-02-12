@@ -1,6 +1,6 @@
-import { VercelResponse } from '@vercel/node'
+import { VercelRequest, VercelResponse } from '@vercel/node'
 
-export default async function handler(res: VercelResponse) {
+export default async function handler(_: VercelRequest, res: VercelResponse) {
   const wakaURL = "https://wakatime.com/api/v1/users/current/stats?api_key="
   const apiKey = import.meta.env.VITE_WAKA_API
 
