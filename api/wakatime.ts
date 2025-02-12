@@ -1,12 +1,13 @@
 import { VercelRequest, VercelResponse } from '@vercel/node'
 
 export default async function handler(_: VercelRequest, res: VercelResponse) {
-  const wakaURL = "https://wakatime.com/api/v1/users/current/stats?api_key="
   const apiKey = process.env.WAKA_API
+  const user = process.env.WAKA_USER
+  const wakaURL = `https://wakatime.com/api/v1/users/${user}/stats?api_key=${apiKey}`
 
   console.log(process.env.WAKA_API)
   try {
-    const response = await fetch(`${wakaURL}${apiKey}`);
+    const response = await fetch(wakaURL);
 
 
     if (response.ok) {
