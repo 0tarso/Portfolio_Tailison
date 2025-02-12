@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Header from './components/header'
 import Hero from './components/hero'
 import Projects from './components/projects'
@@ -7,6 +8,13 @@ import Skills from './components/skills'
 import { motion } from 'motion/react'
 
 function App() {
+
+  useEffect(() => {
+    fetch('/api/wakatime')
+      .then(res => res.json())
+      .then(data => console.log(data))
+      .catch(error => console.log(error))
+  })
 
   return (
     <div className='max-md:overflow-x-clip'>
