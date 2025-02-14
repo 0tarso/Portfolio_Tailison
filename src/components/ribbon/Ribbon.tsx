@@ -40,7 +40,7 @@ const Ribbon = () => {
         <motion.div className='absolute'
             initial={{ translateX: "-500px", opacity: 0 }}
             animate={{ opacity: 1, translateX: 0 }}
-            transition={{ duration: 2, delay: 0.5 }}
+            transition={{ duration: 1.5, delay: 0.5 }}
             style={{ willChange: "opacity, transform" }}
         >
             <h1 className='text-7xl font-bold text-white max-lg:text-6xl transition-all max-sm:text-5xl'>Desenvolvedor</h1>

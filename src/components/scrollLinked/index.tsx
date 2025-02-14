@@ -12,7 +12,6 @@ export default function ScrollLinked() {
     <>
       <motion.div
         id="scroll-indicator"
-
         style={{
           scaleX,
           position: "fixed",

@@ -30,7 +30,6 @@ const Hero = () => {
 		const handleResize = () => {
 			if (window.innerWidth < 1024) {
 				setChangeLayout(true);
-				// console.log(changeLayout)
 				return
 			}
 			else {
@@ -38,7 +37,6 @@ const Hero = () => {
 			}
 		};
 		handleResize()
-		// console.log(changeLayout)
 
 		window.addEventListener("resize", handleResize);
 		return () => window.removeEventListener("resize", handleResize);
@@ -47,13 +45,16 @@ const Hero = () => {
 
 	return (
 		<MotionDiv>
+
 			<Container>
+
 				<div id='home' className=' h-screen flex flex-col items-center max-lg:items-start max-lg:mb-64 mb-60 max-sm:mb-32 justify-center'>
 
 					<section className=' relative w-full pt-24 flex flex-row max-md:flex-col transition-all max-lg:mt-44 max-sm:mt-0 max-sm:pt-20'>
 
 						<Ribbon />
 						<div className='max-w-md  flex flex-col justify-between max-lg:max-w-full max-md:max-w-full max-md:mt-0'>
+
 
 							<div className={`${changeLayout ? "flex" : "hidden"} mt-48 transition-all flex items-end h-[350px] max-sm:h-[300px] max-md:mt-28 max-sm:mt-14 justify-end `}
 							>
@@ -78,7 +79,9 @@ const Hero = () => {
 								/>
 							</div>
 
+
 							<div className='relative transition-all flex justify-end flex-col h-full'					>
+
 								<h2 className='font-black text-green-500 text-3xl max-lg:text-5xl transition-all max-lg:mt-4 max-sm:text-3xl max-sm:mt-0'>Olá, sou o Tailison Ramos</h2>
 
 								<div className='mb-12 max-xl:mb-4 transition-all'>
@@ -101,16 +104,17 @@ const Hero = () => {
 										download={arquivoCurriculo}
 									>
 
-										<button className='flex gap-x-2'
-											onClick={() => console.log('Funcionando')}
-										>
+										<button className='flex gap-x-2'>
 											Currículo
 											<IoDocumentTextOutline size={20} />
 										</button>
 									</a>
 
 								</div>
+
+
 							</div>
+
 
 						</div>
 

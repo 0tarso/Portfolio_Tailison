@@ -13,10 +13,10 @@ const MotionDiv = ({ children }: { children: ReactNode }) => {
       }}
       whileInView={{
         opacity: 1,
-        scale: 1 // Torna o conteúdo visível quando entra na tela
+        scale: 1
       }}
-      viewport={{ once: false }} // Garante que o efeito será aplicado repetidamente
-      transition={{ duration: 0.9 }} // Duração da transição
+      viewport={{ once: false }}
+      transition={{ duration: 0.9 }}
     >
       {children}
     </motion.div>

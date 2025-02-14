@@ -45,9 +45,13 @@ interface TechBadgeProps {
 
 const TechBadge = memo(({ tech }: TechBadgeProps) => {
   return (
+
     <div className="flex bg-white drop-shadow-sm border-r-2 border-b-2 border-b-zinc-100 hover:border-r-green-400 hover:border-b-green-400 border-r-zinc-200 w-fit px-2 py-1 rounded-tr-xl rounded-bl-xl rounded-tl-sm cursor-default items-center">
+
       {techIcons[tech]}
+
       <span className="ml-1 font-medium text-zinc-900 max-sm:text-sm">{tech}</span>
+
     </div>
   );
 });

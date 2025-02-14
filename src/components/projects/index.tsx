@@ -1,7 +1,7 @@
 //Assets
 import prepcarsPage from '../../assets/prepPag.png'
-import encurtandoPage from '../../assets/encurtandoPag.png'
 import portfolioPage from '../../assets/portfolioImg.png'
+import encurtandoPage from '../../assets/encurtandoPag.png'
 
 
 //Components
@@ -16,6 +16,7 @@ const Projects = () => {
   return (
 
     <Container>
+
       <section className='w-full h-full flex flex-col justify-center relative' >
 
         <div className='flex flex-col items-start mb-12'>

@@ -12,6 +12,7 @@ const Skills = () => {
   return (
 
     <Container>
+
       <section className='mt-20 h-screen max-sm:h-full relative' id='skills'>
 
         <div className='mb-5 pt-6'>
@@ -32,6 +33,7 @@ const Skills = () => {
           ></motion.div>
         </div>
 
+
         <div className='h-full flex flex-col relative '>
           <motion.img src={devStudy} className='absolute w-2/4 right-[-90px] top-0 max-lg:right-[-40px] max-md:top-[320px] max-md:right-[-100px] max-sm:top-[-280px] max-sm:right-[-120px] max-sm:w-[350px]'
             initial={{ translateY: "-10px" }}
@@ -39,6 +41,7 @@ const Skills = () => {
             transition={{ duration: 2, bounce: 0.5, type: 'spring', repeat: Infinity, repeatType: 'mirror' }}
             style={{ willChange: "transform" }}
           />
+
           <div className='h-fit rounded-2xl grid grid-cols-3 p-4 gap-x-4 max-md:grid-cols-2 max-sm:grid-cols-1 transition-all max-sm:place-items-center'>
 
             <motion.div className='flex bg-white flex-col p-4 rounded-xl h-fit max-sm:w-3/4 max-sm:mb-8'

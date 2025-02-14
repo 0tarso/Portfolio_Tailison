@@ -11,19 +11,6 @@ import Footer from './components/footer'
 
 function App() {
 
-  // useEffect(() => {
-
-  // caminho correto na Vercel
-  // fetch('/api/wakatime')
-  //   .then(res => res.json())
-  //   .then(data => console.log(data))
-  //   .catch(error => {
-  //     console.log(error + "Errrooooo")
-  //     console.log(error.message)
-  //     console.log(error.code)
-  //   })
-
-
   return (
     <div className='max-md:overflow-x-clip'>
 
@@ -59,9 +46,9 @@ function App() {
       <CallMe />
 
       <Footer />
+
     </div>
   )
 }
 
 export default App
-// bg-gradient-to-t from-green-700/10 to-[#1a1a1a]/50
