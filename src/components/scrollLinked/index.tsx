@@ -21,10 +21,10 @@ export default function ScrollLinked() {
           right: 0,
           height: 5,
           originX: 0,
-          z: 100,
+          z: 1000,
           backgroundColor: "#4ade80",
         }}
-        className="z-50 max-sm:hidden rounded-r-xl"
+        className="max-sm:hidden rounded-r-xl"
       />
     </>
   )

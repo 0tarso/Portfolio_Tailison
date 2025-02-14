@@ -28,15 +28,17 @@ const AboutMe = () => {
             weekAverage: rawData.human_readable_total.replace(/\s+/g, ""),
           }
 
-          console.log(wakaStats)
+          // console.log(wakaStats)
           setWakaData({ ...wakaStats })
           setUpdateComponent(prevState => prevState + 1)
 
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+          console.log(error)
+        })
     }
 
-    console.log("wakaData abaix", wakaData)
+    // console.log("wakaData abaix", wakaData)
 
   }, [wakaData])
 
@@ -45,7 +47,7 @@ const AboutMe = () => {
 
   return (
     <Container>
-      <div className='mt-40' id='about'>
+      <div className='mt-40 pt-12' id='about'>
 
         <div className=''>
           <motion.span className='w-fit text-white text-6xl font-bold max-sm:text-4xl'

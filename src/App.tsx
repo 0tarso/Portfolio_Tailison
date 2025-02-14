@@ -6,6 +6,7 @@ import Skills from './components/skills'
 
 import { motion } from 'motion/react'
 import AboutMe from './components/aboutMe'
+import CallMe from './components/callMe'
 
 function App() {
 
@@ -54,6 +55,7 @@ function App() {
       <AboutMe />
 
 
+      <CallMe />
 
 
     </div>

@@ -18,7 +18,7 @@ const Hero = () => {
 		const handleResize = () => {
 			if (window.innerWidth < 1024) {
 				setChangeLayout(true);
-				console.log(changeLayout)
+				// console.log(changeLayout)
 				return
 			}
 			else {
@@ -26,7 +26,7 @@ const Hero = () => {
 			}
 		};
 		handleResize()
-		console.log(changeLayout)
+		// console.log(changeLayout)
 
 		window.addEventListener("resize", handleResize);
 		return () => window.removeEventListener("resize", handleResize);
