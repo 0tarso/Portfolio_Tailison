@@ -23,6 +23,9 @@ const Hero = () => {
 
 	const [changeLayout, setChangeLayout] = useState(false)
 
+	const curriculoLink = 'https://drive.google.com/file/d/1nMoUgjzOu3RpQbRA-JfaOxYNUh3sJQLg/view?usp=drive_link'
+	const arquivoCurriculo = 'CV-TailisonRamosDev.pdf'
+
 	useEffect(() => {
 		const handleResize = () => {
 			if (window.innerWidth < 1024) {
@@ -93,11 +96,18 @@ const Hero = () => {
 										<FaLinkedin size={20} />
 									</a>
 
-									<button className='w-full flex gap-x-2 justify-center items-center bg-green-600 font-medium text-white rounded-md hover:bg-green-400 transition-all hover:scale-105'
+									<a className='w-full flex justify-center items-center bg-green-600 font-medium text-white rounded-md hover:bg-green-400 transition-all hover:scale-105 cursor-pointer'
+										href={curriculoLink}
+										download={arquivoCurriculo}
 									>
-										Currículo
-										<IoDocumentTextOutline size={20} />
-									</button>
+
+										<button className='flex gap-x-2'
+											onClick={() => console.log('Funcionando')}
+										>
+											Currículo
+											<IoDocumentTextOutline size={20} />
+										</button>
+									</a>
 
 								</div>
 							</div>
