@@ -1,14 +1,25 @@
+//React
+import { useState } from 'react'
+
+//Component
+import Input from '../input'
 import Container from '../container'
+
+//FramerMotion
 import { motion } from 'motion/react'
 
+//Assets
 import callme from '../../assets/animeBoy.png'
+
+//Zod
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import Input from '../input'
 
+//EmailJs
 import emailjs from "@emailjs/browser"
-import { useState } from 'react'
+
+//Icon
 import { CgSpinner } from 'react-icons/cg'
 
 
@@ -78,7 +89,7 @@ const CallMe = () => {
   return (
     <Container>
 
-      <section id='callme' className='h-screen pt-6 max-md:mt-40 relative'>
+      <section id='callme' className='h-screen pt-6 max-md:mt-40 relative max-md:h-full'>
 
         <div>
           <div className=''>

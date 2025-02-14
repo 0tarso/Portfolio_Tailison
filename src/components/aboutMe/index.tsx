@@ -1,14 +1,19 @@
+//React
 import { useEffect, useState } from 'react'
+
+//Component
 import Container from '../container'
+
+//FramerMotion
 import { motion } from 'motion/react'
 
+//Asset
 import profileImg from '../../assets/profileImg.png'
 
 type WakaData = {
   dailyAverage: string,
   weekAverage: string
 }
-
 
 const AboutMe = () => {
 

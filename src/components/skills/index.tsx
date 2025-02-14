@@ -1,8 +1,11 @@
-import Container from '../container'
+//FramerMotion
 import { motion } from 'motion/react'
 
+//Assets
 import devStudy from '../../assets/devStudy.png'
 
+//Component
+import Container from '../container'
 import StackProgress from '../stackProgress'
 
 const Skills = () => {

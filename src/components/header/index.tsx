@@ -1,8 +1,11 @@
+//React
 import { useEffect, useState } from "react";
 
+//Icons
 import { CiMenuFries } from "react-icons/ci";
 import { FiX } from 'react-icons/fi'
 
+//FramerMotion
 import { motion } from 'motion/react'
 
 

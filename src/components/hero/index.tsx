@@ -1,14 +1,23 @@
+//React
 import { useEffect, useState } from 'react'
+
+//Component
+import Container from '../container'
+import MotionDiv from '../motionDiv'
 import Ribbon from '../ribbon/Ribbon'
+
+//Assets
 import devImg from '../../assets/dev.png'
 import nodeImg from '../../assets/nodeLogo.png'
 import jsLogo from '../../assets/jsLogo.png'
 import reactLogo from '../../assets/react.png'
+
+//FramerMotion
 import { motion } from "motion/react"
+
+//Icons
 import { FaLinkedin } from 'react-icons/fa'
 import { IoArrowDownCircleOutline, IoDocumentTextOutline } from 'react-icons/io5'
-import Container from '../container'
-import MotionDiv from '../motionDiv'
 
 const Hero = () => {
 

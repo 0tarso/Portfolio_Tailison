@@ -1,10 +1,13 @@
+//React
 import { JSX, memo } from 'react'
-import { BiLogoTypescript } from 'react-icons/bi'
-import { FaJsSquare, FaNodeJs, FaReact } from 'react-icons/fa'
+
+//Icons
 import { IoLogoCss3 } from 'react-icons/io5'
-import { RiFirebaseFill, RiTailwindCssFill, RiVercelLine } from 'react-icons/ri'
-import { SiExpress, SiRender, SiZod } from 'react-icons/si'
+import { BiLogoTypescript } from 'react-icons/bi'
 import { TbBrandFramerMotion } from 'react-icons/tb'
+import { SiExpress, SiRender, SiZod } from 'react-icons/si'
+import { FaJsSquare, FaNodeJs, FaReact } from 'react-icons/fa'
+import { RiFirebaseFill, RiTailwindCssFill, RiVercelLine } from 'react-icons/ri'
 
 type Techs =
   | "React"
