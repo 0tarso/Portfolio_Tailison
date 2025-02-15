@@ -5,9 +5,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const acceptOrigin = process.env.ORIGIN
   const origin = req.headers.referer
 
-  console.log(acceptOrigin)
-  console.log(origin)
-
   const wakaURL = process.env.WAKA_URL
 
   if (!origin || acceptOrigin !== String(origin)) {
