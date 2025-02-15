@@ -10,6 +10,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const wakaURL = `https://wakatime.com/api/v1/users/${user}/stats?api_key=${apiKey}`
 
   if (!origin || !acceptOrigin.includes(origin)) {
+    console.log(origin)
+    console.log(acceptOrigin)
+
     return res.status(403).json({ error: "Acesso negado" })
   }
 
