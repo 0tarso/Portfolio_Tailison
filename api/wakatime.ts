@@ -5,7 +5,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const user = process.env.WAKA_USER
 
   const acceptOrigin = process.env.ORIGIN
-  const origin = req.headers
+  const origin = req.headers.referer
 
   console.log(acceptOrigin)
   console.log(origin)
