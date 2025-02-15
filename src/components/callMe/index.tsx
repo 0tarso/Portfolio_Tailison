@@ -52,8 +52,6 @@ const CallMe = () => {
 
   const handleSubmitEmail = async (data: FormData) => {
 
-    console.log(data)
-
     setVisitorData(data)
 
     setLoading(true)
