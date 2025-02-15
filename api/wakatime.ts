@@ -1,17 +1,24 @@
 import { VercelRequest, VercelResponse } from '@vercel/node'
 
-export default async function handler(_: VercelRequest, res: VercelResponse) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   const apiKey = process.env.WAKA_API
   const user = process.env.WAKA_USER
+
+  const acceptOrigin = [process.env.ORIGIN]
+  const origin = req.headers.origin
+
   const wakaURL = `https://wakatime.com/api/v1/users/${user}/stats?api_key=${apiKey}`
 
-  console.log(process.env.WAKA_API)
+  if (!origin || !acceptOrigin.includes(origin)) {
+    return res.status(403).json({ error: "Acesso negado" })
+  }
+
   try {
     const response = await fetch(wakaURL);
 
 
     if (response.ok) {
-      const data = await response.json();  // Tente pegar o erro como texto
+      const data = await response.json();
       return res.status(response.status).json({ data: data, response: response.status });
     }
 
