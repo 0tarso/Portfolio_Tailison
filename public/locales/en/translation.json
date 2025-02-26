@@ -1,0 +1,13 @@
+{
+  "header": {
+    "start": "Home",
+    "projects": "Projects",
+    "mobileProjects": "i do",
+    "skills": "Skills",
+    "mobileSkills": "i develop",
+    "aboutMe": "About",
+    "mobileAboutMe": "me",
+    "callMe": "Get in Touch",
+    "mobileCallMe": "to develop together"
+  }
+}
