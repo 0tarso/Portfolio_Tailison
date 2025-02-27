@@ -19,7 +19,11 @@ import { motion } from "motion/react"
 import { FaLinkedin } from 'react-icons/fa'
 import { IoArrowDownCircleOutline, IoDocumentTextOutline } from 'react-icons/io5'
 
+//Translation texts
+import { useTranslation } from 'react-i18next'
+
 const Hero = () => {
+	const { t: text } = useTranslation();
 
 	const [changeLayout, setChangeLayout] = useState(false)
 
@@ -82,11 +86,11 @@ const Hero = () => {
 
 							<div className='relative transition-all flex justify-end flex-col h-full'					>
 
-								<h2 className='font-black text-green-500 text-3xl max-lg:text-5xl transition-all max-lg:mt-4 max-sm:text-3xl max-sm:mt-0'>Olá, sou o Tailison Ramos</h2>
+								<h2 className='font-black text-green-500 text-3xl max-lg:text-5xl transition-all max-lg:mt-4 max-sm:text-3xl max-sm:mt-0'>{text("hero.subtitle")}</h2>
 
 								<div className='mb-12 max-xl:mb-4 transition-all'>
 									<p className='text-white transition-all mt-2'>
-										Estudante e desenvolvedor full-stack buscando se especializar em aplicações web e mobile utilizando ferramentas como <span className='text-green-500 font-bold'>React e TypeScript.</span></p>
+										{text("hero.overview")}<span className='text-green-500 font-bold'>{text("hero.reactAndType")}</span></p>
 
 								</div>
 
@@ -95,7 +99,7 @@ const Hero = () => {
 										href='https://www.linkedin.com/in/0tarsodev'
 										target="_blank"
 										rel='noopener noreferrer'
-									>LinkedIn
+									>{text("hero.linkedin")}
 										<FaLinkedin size={20} />
 									</a>
 
@@ -105,7 +109,7 @@ const Hero = () => {
 									>
 
 										<button className='flex gap-x-2'>
-											Currículo
+											{text("hero.curriculum")}
 											<IoDocumentTextOutline size={20} />
 										</button>
 									</a>
@@ -153,6 +157,8 @@ const Hero = () => {
 
 					<a className='flex w-full justify-center  mt-8'
 						href='#projects'
+						aria-label={text("hero.scrollBottom")}
+						title={text("hero.scrollBottom")}
 					>
 						<motion.div className='rounded-full'
 							initial={{ scale: 1, filter: "brightness(2)" }}

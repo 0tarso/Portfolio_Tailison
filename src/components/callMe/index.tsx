@@ -21,17 +21,7 @@ import emailjs from "@emailjs/browser"
 
 //Icon
 import { CgSpinner } from 'react-icons/cg'
-
-
-const schema = z.object({
-  email: z.string().email('Insira um email válido').nonempty('Email obrigatório para mandar uma mensagem'),
-  name: z.string().nonempty('Meu nome é Tailison, e o seu?').max(60, 'Máximo 60 caracteres'),
-  subject: z.string().min(5, 'Vamos lá, só 5 caracteres para eu encontrar você mais rapidamente').max(100, 'Máximo 100 caracteres'),
-  description: z.string().min(20, 'Você pode mandar qualquer coisa, qualquer coisa com no mínimo 20 caracteres').max(1000, 'Máximo 1000 caracteres')
-})
-
-
-type FormData = z.infer<typeof schema>
+import { useTranslation } from 'react-i18next'
 
 
 const CallMe = () => {
@@ -39,6 +29,18 @@ const CallMe = () => {
   const emailJsService = import.meta.env.VITE_EMAIL_JS_SERVICE_KEY
   const emailJsTemplate = import.meta.env.VITE_EMAIL_JS_TEMPLATE_KEY
   const emailJsPublicKey = import.meta.env.VITE_EMAIL_JS_PB_KEY
+
+  const { t: text } = useTranslation()
+
+  const schema = z.object({
+    email: z.string().email(text("callMe.formErrors.email")).nonempty('Email obrigatório para mandar uma mensagem'),
+    name: z.string().nonempty(text("callMe.formErrors.name")).max(60, 'Máximo 60 caracteres'),
+    subject: z.string().min(5, text("callMe.formErrors.subject")).max(100, 'Máximo 100 caracteres'),
+    description: z.string().min(20, text("callMe.formErrors.message")).max(1000, 'Máximo 1000 caracteres')
+  })
+
+
+  type FormData = z.infer<typeof schema>
 
   const [visitorData, setVisitorData] = useState<FormData | null>()
   const [loading, setLoading] = useState<boolean>(false)
@@ -96,7 +98,7 @@ const CallMe = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.7 }}
               style={{ willChange: "opacity" }}
-            >Contato
+            >{text('callMe.title')}
             </motion.span>
 
             {/* Detalhe de layout */}
@@ -121,8 +123,8 @@ const CallMe = () => {
           <div className=' w-full flex flex-col justify-start '>
 
 
-            <span className='block text-zinc-300 font-bold text-8xl mt-20 min-2xl:mt-16 -z-40 max-lg:text-6xl max-sm:mt-0 transition-all'>Vamos criar</span>
-            <span className='block text-green-500 font-bold text-8xl mb-44 -z-50 max-lg:text-6xl transition-all'>#Juntos</span>
+            <span className='block text-zinc-300 font-bold text-8xl mt-20 min-2xl:mt-16 -z-40 max-lg:text-6xl max-sm:mt-0 transition-all'>{text("callMe.create")}</span>
+            <span className='block text-green-500 font-bold text-8xl mb-44 -z-50 max-lg:text-6xl transition-all'>{text("callMe.together")}</span>
 
             <img src={callme} className='absolute w-[450px] left-56 h-auto -z-40 bottom-0 filter hue-rotate-30 saturate-[90%] max-lg:left-28 transition-all max-md:left-64 max-sm:w-[350px] max-sm:left-32 max-sm:bottom-[-50px]' />
 
@@ -133,7 +135,7 @@ const CallMe = () => {
 
             <div className='bg-white h-full w-full rounded-tl-md rounded-tr-3xl rounded-bl-3xl rounded-br-md p-4 shadow-xl shadow-green-300/20'>
               <div className=''>
-                <p className='text-center text-5xl font-bold mt-2 text-zinc-700 max-sm:text-4xl'>Diga um Olá!</p>
+                <p className='text-center text-5xl font-bold mt-2 text-zinc-700 max-sm:text-4xl'>{text("callMe.hello")}</p>
 
 
 
@@ -141,43 +143,43 @@ const CallMe = () => {
 
                   <div className='flex gap-x-4 max-sm:flex-col'>
                     <div className='flex-1'>
-                      <p className='font-medium mb-1 text-zinc-700'>Seu nome</p>
+                      <p className='font-medium mb-1 text-zinc-700'>{text("callMe.form.name")}</p>
                       <Input
                         type='text'
                         register={register}
                         name="name"
                         error={errors.name?.message}
-                        placeholder='John Doe'
+                        placeholder={text("callMe.formPlaceholder.name")}
                       />
                     </div>
 
                     <div className='flex-1'>
-                      <p className='font-medium mb-1 text-zinc-700'>Email</p>
+                      <p className='font-medium mb-1 text-zinc-700'>{text("callMe.form.email")}</p>
                       <Input
                         type='text'
                         register={register}
                         name="email"
                         error={errors.email?.message}
-                        placeholder='johndoe@gmail.com'
+                        placeholder={text("callMe.formPlaceholder.email")}
                       />
                     </div>
                   </div>
 
-                  <p className='font-medium mb-1 text-zinc-700'>Assunto</p>
+                  <p className='font-medium mb-1 text-zinc-700'>{text("callMe.form.subject")}</p>
                   <Input
                     type='text'
                     register={register}
                     name="subject"
                     error={errors.subject?.message}
-                    placeholder='Um simples olá'
+                    placeholder={text("callMe.formPlaceholder.subject")}
                   />
 
-                  <p className='font-medium mb-1 mt-3 text-zinc-700'>Mensagem</p>
+                  <p className='font-medium mb-1 mt-3 text-zinc-700'>{text("callMe.form.message")}</p>
                   <textarea
                     className='resize-none border-2 w-full rounded-md h-24 px-2'
                     {...register("description")}
                     name="description"
-                    placeholder='Olá, Tailison Ramos! Vim pelo seu portfólio'
+                    placeholder={text("callMe.formPlaceholder.message")}
                   />
 
 
@@ -195,8 +197,10 @@ const CallMe = () => {
                         <CgSpinner size={28} />
                       </motion.div>
 
-                    ) : "Enviar"}
-
+                    ) : (
+                      <span>{text("callMe.form.send")}</span>
+                    )
+                    }
 
                   </button>
 
@@ -217,8 +221,8 @@ const CallMe = () => {
           >
             <div className='bg-green-600 w-full h-fit rounded-lg flex flex-col items-center p-8 '>
               <span className='text-zinc-100 text-7xl font-bold max-sm:text-5xl max-sm:self-start'>Olá, {visitorData?.name}</span>
-              <span className='mt-6 text-2xl font-medium text-zinc-800'>Será um prazer responder você.</span>
-              <span className='text-2xl font-medium text-zinc-800'>Fique de olho em seu email!</span>
+              <span className='mt-6 text-2xl font-medium text-zinc-800'>{text("formSuccess.title")}</span>
+              <span className='text-2xl font-medium text-zinc-800'>{text("formSuccess.description")}</span>
 
               <button className='bg-white w-2/4 max-sm:w-full py-4 mt-8 max-sm:mt-2 rounded-tl-md rounded-tr-md rounded-bl-2xl rounded-br-md text-green-800 font-bold text-2xl drop-shadow-md hover:scale-[1.02] hover:bg-green-400 hover:text-white transition-all duration-500'
                 onClick={() => setEmailSent(!emailSent)}

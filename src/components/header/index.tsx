@@ -4,12 +4,18 @@ import { useEffect, useState } from "react";
 //Icons
 import { CiMenuFries } from "react-icons/ci";
 import { FiX } from 'react-icons/fi'
+import brazilFlag from '/brazilFlag.png'
+import usaFlag from '/euaFlag.png'
 
 //FramerMotion
 import { motion } from 'motion/react'
 
 
+import { useTranslation } from "react-i18next";
+
 const Header = () => {
+
+	const { t: text, i18n } = useTranslation();
 
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 	const [lastScrollY, setLastScrollY] = useState<number>(0)
@@ -20,13 +26,12 @@ const Header = () => {
 			const currentScrollY = window.scrollY;
 
 			if (currentScrollY === 0) {
-				// Sempre mostra o menu ao chegar no topo
 				setIsVisible(true);
+
 			} else if (currentScrollY > lastScrollY) {
-				// Rolando para baixo, esconde o menu
 				setIsVisible(false);
+
 			} else {
-				// Rolando para cima, mostra o menu
 				setIsVisible(true);
 			}
 
@@ -36,6 +41,12 @@ const Header = () => {
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, [lastScrollY]);
+
+
+	const handleLangugage = (lang: string) => {
+		i18n.changeLanguage(lang)
+		// setIsOpen(false)
+	}
 
 
 	const handleHideMenu = () => {
@@ -79,28 +90,46 @@ const Header = () => {
 					<a className={`transition-all text-white border-b-2 border-transparent text-md hover:cursor-pointer hover:border-green-700 hover:text-green-100`}
 						href="#home"
 						onClick={() => handleHideMenu()}
-					>Início</a>
+					>{text("header.start")}</a>
 
 					<a className={`transition-all text-white border-b-2 border-transparent text-md hover:cursor-pointer hover:border-green-700 hover:text-green-100 `}
 						href="#projects"
 						onClick={() => handleHideMenu()}
-					>Projetos<span className="hidden max-md:block text-center text-sm text-zinc-600">{"<"}que eu faço{">"}</span></a>
+					>{text("header.projects")}<span className="hidden max-md:block text-center text-sm text-zinc-600">{"<"}{text("header.mobileProjects")}{">"}</span></a>
 
 					<a className={`transition-all text-white border-b-2 text-center border-transparent text-md hover:cursor-pointer hover:border-green-700 hover:text-green-100 `}
 						href="#skills"
 						onClick={() => handleHideMenu()}
-					>Habilidades<span className="hidden max-md:block text-sm text-zinc-600">{"<"}que desenvolvo{">"}</span></a>
+					>{text("header.skills")}<span className="hidden max-md:block text-sm text-zinc-600">{"<"}{text("header.mobileSkills")}{">"}</span></a>
 
 					<a className={`transition-all text-white border-b-2 text-center border-transparent text-md hover:cursor-pointer hover:border-green-700 hover:text-green-100 `}
 						href="#about"
 						onClick={() => handleHideMenu()}
-					>Sobre<span className="hidden max-md:block text-sm text-zinc-600">{"<"}minha pessoa{">"}</span></a>
+					>{text("header.aboutMe")}<span className="hidden max-md:block text-sm text-zinc-600">{"<"}{text("header.mobileAboutMe")}{">"}</span></a>
 
 					<a className={`transition-all text-white border-b-2 text-center border-transparent text-md hover:cursor-pointer hover:border-green-700 hover:text-green-100`}
 						href="#callme"
 						onClick={() => handleHideMenu()}
-					>Contato<span className="hidden max-md:block text-sm  text-zinc-600">{"<"}para desenvolvermos juntos{">"}</span></a>
+					>{text("header.callMe")}<span className="hidden max-md:block text-sm  text-zinc-600">{"<"}{text("header.mobileCallMe")}{">"}</span></a>
 
+
+					<div className="flex gap-x-4">
+						<button
+							onClick={() => handleLangugage("pt")}
+							className="text-white rounded-full text-sm hover:scale-[1.04] hover:shadow-lg hover:shadow-white/30 transition w-7 h-7 max-sm:w-12 max-sm:h-12 "
+							aria-label={text("header.portugueseAriaLabelBtn")}
+						>
+							<img src={brazilFlag} />
+						</button>
+						<button
+							onClick={() => handleLangugage("en")}
+							className="text-white rounded-full text-sm hover:scale-[1.04] hover:shadow-lg hover:shadow-white/30 transition w-7 h-7 max-sm:w-12 max-sm:h-12 "
+							aria-label={text("header.englishAriaLabelBtn")}
+						>
+							<img src={usaFlag} />
+						</button>
+
+					</div>
 				</nav>
 			</motion.div>
 		</header >

@@ -10,8 +10,11 @@ import ProjectCard from '../projectCard'
 
 //Framer Motion
 import { motion } from 'motion/react'
+import { useTranslation } from 'react-i18next'
 
 const Projects = () => {
+
+  const { t: text } = useTranslation();
 
   return (
 
@@ -26,7 +29,7 @@ const Projects = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
             style={{ willChange: "opacity" }}
-          >Projetos Desenvolvidos
+          >{text('projects.title')}
           </motion.span>
 
           {/* Detalhe de layout */}
@@ -45,7 +48,7 @@ const Projects = () => {
             cardImg={prepcarsPage}
             projectName='PrepCars'
             stack={['TypeScript', 'React', 'Zod', 'Firebase', 'Tailwind', 'FramerMotion', 'Vercel']}
-            description='Uma plataforma de anúncios de carros. Fácil e simples de usar. Onde o usuário pode fazer o seu anúncio e interagir com outros anunciantes, favoritando seus carros e salvando seus preferidos.'
+            description={text('projects.prepcars.description')}
             deploymentLink='https://prepcars.vercel.app/'
             gitHubLink='https://github.com/0tarso/PrepCars-ReactJS'
 
@@ -55,7 +58,7 @@ const Projects = () => {
             cardImg={encurtandoPage}
             projectName='Encurtando'
             stack={['JavaScript', 'React', 'CSS', 'Firebase', 'Node', 'Express', 'Vercel', 'Render']}
-            description='Trata-se de um encurtador de links e gerador de QRcode. Gentil e amigável com o usuário, ele foca naquilo que se propõe. Encurtar links.'
+            description={text('projects.encurtando.description')}
             linkedInLink='https://www.linkedin.com/posts/0tarsodev_react-nodejs-vite-activity-7284577439949705218-2Rzl?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMBAUABqnfFxb1lWRc-PSTPvy7KqtDmHvQ'
             gitHubLink='https://github.com/0tarso/Encurtando--Full'
             deploymentLink='https://www.encurtando.com/'
@@ -65,7 +68,7 @@ const Projects = () => {
             cardImg={portfolioPage}
             projectName='TailisonDev'
             stack={['TypeScript', 'React', 'Tailwind', 'FramerMotion', 'Vercel']}
-            description='Meu primeiro portfólio. Aqui, usei as habilidades que adquiri até o momento para apresentar um pouco sobre mim a você. Espero que goste!'
+            description={text('projects.tailisonDev.description')}
             linkedInLink='...'
             gitHubLink='...'
           />

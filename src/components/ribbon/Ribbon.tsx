@@ -1,7 +1,10 @@
 import { useEffect, useState, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next';
 
 const Ribbon = () => {
+    const { t: text } = useTranslation();
+
     const techTexts = ['Javascript', 'ReactJS', 'TypeScript', 'Full-stack']
 
     const [tech, setTech] = useState<string>("")
@@ -43,7 +46,7 @@ const Ribbon = () => {
             transition={{ duration: 1.5, delay: 0.5 }}
             style={{ willChange: "opacity, transform" }}
         >
-            <h1 className='text-7xl font-bold text-white max-lg:text-6xl transition-all max-sm:text-5xl'>Desenvolvedor</h1>
+            <h1 className='text-7xl font-bold text-white max-lg:text-6xl transition-all max-sm:text-5xl'>{text("hero.title")}</h1>
             <span className='text-7xl text-green-500 font-bold max-lg:text-5xl max-xl:text-5xl'>{tech}</span>
         </motion.div>
     )

@@ -7,8 +7,11 @@ import devStudy from '../../assets/devStudy.png'
 //Component
 import Container from '../container'
 import StackProgress from '../stackProgress'
+import { useTranslation } from 'react-i18next'
 
 const Skills = () => {
+  const { t: text } = useTranslation()
+
   return (
 
     <Container>
@@ -21,7 +24,7 @@ const Skills = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
             style={{ willChange: "opacity" }}
-          >Habilidades
+          >{text('skills.title')}
           </motion.span>
 
           {/* Detalhe de layout */}
@@ -81,7 +84,7 @@ const Skills = () => {
             </motion.div>
 
           </div>
-          <p className='text-zinc-300 font-medium w-3/4 px-4 max-lg:w-full max-md:w-3/4 max-xl:w-5/6 max-sm:w-full max-sm:text-center'>Para a criação dos meus projetos, utilizo a maioria das ferramentas acima. Procuro também explorar outras linguagens e frameworks para me manter atualizado e apto a desenvolver projetos inovadores.</p>
+          <p className='text-zinc-300 font-medium w-3/4 px-4 max-lg:w-full max-md:w-3/4 max-xl:w-5/6 max-sm:w-full max-sm:text-center'>{text("skills.overview")}</p>
 
         </div>
 
