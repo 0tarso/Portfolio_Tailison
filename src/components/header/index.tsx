@@ -45,6 +45,7 @@ const Header = () => {
 
 	const handleLangugage = (lang: string) => {
 		i18n.changeLanguage(lang)
+		// setIsOpen(false)
 	}
 
 
@@ -116,12 +117,14 @@ const Header = () => {
 						<button
 							onClick={() => handleLangugage("pt")}
 							className="text-white rounded-full text-sm hover:scale-[1.04] hover:shadow-lg hover:shadow-white/30 transition w-7 h-7 max-sm:w-12 max-sm:h-12 "
+							aria-label={text("header.portugueseAriaLabelBtn")}
 						>
 							<img src={brazilFlag} />
 						</button>
 						<button
 							onClick={() => handleLangugage("en")}
 							className="text-white rounded-full text-sm hover:scale-[1.04] hover:shadow-lg hover:shadow-white/30 transition w-7 h-7 max-sm:w-12 max-sm:h-12 "
+							aria-label={text("header.englishAriaLabelBtn")}
 						>
 							<img src={usaFlag} />
 						</button>

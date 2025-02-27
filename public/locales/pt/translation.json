@@ -8,6 +8,82 @@
     "aboutMe": "Sobre",
     "mobileAboutMe": "minha pessoa",
     "callMe": "Contato",
-    "mobileCallMe": "para desenvolvermos juntos"
+    "mobileCallMe": "para desenvolvermos juntos",
+    "englishAriaLabelBtn": "Selecionar Idioma Inglês",
+    "portugueseAriaLabelBtn": "Selecionar Idioma Português-Brasil"
+  },
+  "hero": {
+    "title": "Desenvolvedor",
+    "subtitle": "Olá, sou o Tailison Ramos",
+    "overview": "Estudante e desenvolvedor full-stack buscando se especializar em aplicações web e mobile utilizando ferramentas como",
+    "reactAndType": " React e TypeScript.",
+    "linkedin": "Linkedin",
+    "curriculum": "Currículo",
+    "scrollBottom": "Ver mais"
+  },
+  "projects": {
+    "title": "Projetos Desenvolvidos",
+    "prepcars": {
+      "description": "Uma plataforma de anúncios de carros. Fácil e simples de usar. Onde o usuário pode fazer o seu anúncio e interagir com outros anunciantes, favoritando seus carros e salvando seus preferidos."
+    },
+    "encurtando": {
+      "description": "Trata-se de um encurtador de links e gerador de QRcode. Gentil e amigável com o usuário, ele foca naquilo que se propõe. Encurtar links."
+    },
+    "tailisonDev": {
+      "description": "Meu primeiro portfólio. Aqui, usei as habilidades que adquiri até o momento para apresentar um pouco sobre mim a você. Espero que goste!"
+    },
+    "whereFindProject": "Onde encontrar o projeto"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "overview": "Para a criação dos meus projetos, utilizo a maioria das ferramentas acima. Procuro também explorar outras linguagens e frameworks para me manter atualizado e apto a desenvolver projetos inovadores."
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "years": "Anos",
+    "dailyCode": "Código diário",
+    "weeklyCode": "Código semanal",
+    "projects": "Projetos",
+    "whoIam": {
+      "title": "Quem sou eu?",
+      "description": "Sou um aspirante a desenvolvedor full-stack apaixonado por tecnologia e inovação."
+    },
+    "whatIamDoing": {
+      "title": "O que estou fazendo?",
+      "description": "Atualmente, estou cursando Análise e Desenvolvimento de Sistemas para expandir meus conhecimentos e aprimorar minhas habilidades no desenvolvimento web."
+    },
+    "whatAmIworkingOn": {
+      "title": "No que estou trabalhando?",
+      "description": "Estou focado em aprender as melhores práticas utilizando React/Native na criação de interfaces modernas e reutilizáveis. Para a criação de projetos completos, busco conhecimento em linguagens SQL e NoSQL, como Postgres e Firebase, utilizando NodeJs no servidor."
+    }
+  },
+  "callMe": {
+    "title": "Contato",
+    "create": "Vamos criar",
+    "together": "#Juntos",
+    "hello": "Diga um Olá!",
+    "form": {
+      "name": "Seu nome",
+      "email": "E-mail",
+      "subject": "Assunto",
+      "message": "Mensagem",
+      "send": "Enviar"
+    },
+    "formPlaceholder": {
+      "name": "John Doe",
+      "email": "johndoe@gmail.com",
+      "subject": "Um simples olá",
+      "message": "Olá, Tailison Ramos! Vim pelo seu porfólio!"
+    },
+    "formErrors": {
+      "name": "Meu nome é Tailison, e o seu?",
+      "email": "Insira um email válido",
+      "subject": "Vamos lá, só 5 caracteres para eu econtrar você mais rapidamente",
+      "message": "Você pode mandar qualquer coisa, qualquer coisa com no mínimo 20 caracteres"
+    },
+    "formSuccess": {
+      "title": "Será um prazer responder você",
+      "description": "Fique de olho em seu email!"
+    }
   }
 }

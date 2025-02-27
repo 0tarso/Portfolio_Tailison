@@ -8,6 +8,81 @@
     "aboutMe": "About",
     "mobileAboutMe": "me",
     "callMe": "Get in Touch",
-    "mobileCallMe": "to develop together"
+    "mobileCallMe": "to develop together",
+    "englishAriaLabelBtn": "Select English Language",
+    "portugueseAriaLabelBtn": "Select Portuguese-Brazil Language"
+  },
+  "hero": {
+    "title": "Developer",
+    "subtitle": "Hello, I'm Tailison Ramos",
+    "overview": "Full-stack developer and student looking to specialize in web and mobile applications using tools like",
+    "reactAndType": " React and TypeScript.",
+    "linkedin": "Linkedin",
+    "curriculum": "Curriculum",
+    "scrollBottom": "See more"
+  },
+  "projects": {
+    "title": "Developed Projects",
+    "prepcars": {
+      "description": "A car ads platform. Easy and simple to use. Where the user can make their ad and interact with other advertisers, favoriting their cars and saving their favorites."
+    },
+    "encurtando": {
+      "description": "It is a link shortener and QRcode generator. Kind and friendly to the user, it focuses on what it proposes. Shorten links."
+    },
+    "tailisonDev": {
+      "description": "My first portfolio. Here, I used the skills I have acquired so far to introduce myself to you. I hope you like it!"
+    },
+    "whereFindProject": "Where to find the project"
+  },
+  "skills": {
+    "title": "Hard Skills",
+    "overview": "For the creation of my projects, I use most of the tools above. I also seek to explore other languages and frameworks to keep myself updated and able to develop innovative projects."
+  },
+  "about": {
+    "title": "About Me",
+    "years": "Years",
+    "dailyCode": "Daily Code",
+    "weeklyCode": "Weekly Code",
+    "projects": "Projects",
+    "whoIam": {
+      "title": "Who am I?",
+      "description": "I am an aspiring full-stack developer passionate about technology and innovation."
+    },
+    "whatIamDoing": {
+      "title": "What am I doing?",
+      "description": "Currently, I am studying Systems Analysis and Development to expand my knowledge and improve my skills in web development."
+    },
+    "whatAmIworkingOn": {
+      "title": "What am I working on?",
+      "description": "I am focused on learning best practices using React/Native in creating modern and reusable interfaces. For the creation of complete projects, I seek knowledge in SQL and NoSQL languages, such as Postgres and Firebase, using NodeJs on the server."
+    }
+  },
+  "callMe": {
+    "title": "Get in Touch",
+    "create": "Let's create",
+    "together": "#Together",
+    "hello": "Say Hello!",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "send": "Send"
+    },
+    "formPlaceholder": {
+      "name": "John Doe",
+      "email": "johndoe@gmail.com",
+      "subject": "Send me a message",
+      "message": "Hi, Tailison! I would like to talk to you about a project."
+    },
+    "formErrors": {
+      "name": "My name's tailison and yours?",
+      "email": "Enter a valid email",
+      "subject": "Come on, just 5 characters so I can find you faster",
+      "message": "You can send anything, anything with at least 20 characters"
+    },
+    "formSuccess": {
+      "title": "It will be a pleasure to answer you",
+      "description": "Keep an eye on your email!"
+    }
   }
 }

@@ -9,6 +9,7 @@ import { motion } from 'motion/react'
 
 //Asset
 import profileImg from '../../assets/profileImg.png'
+import { useTranslation } from 'react-i18next'
 
 type WakaData = {
   dailyAverage: string,
@@ -16,6 +17,9 @@ type WakaData = {
 }
 
 const AboutMe = () => {
+  const { t: text } = useTranslation()
+
+  const age = new Date().getFullYear() - 2000
 
   const [wakaData, setWakaData] = useState<WakaData | null>()
   const [updateComponent, setUpdateComponent] = useState<number>(0)
@@ -33,7 +37,6 @@ const AboutMe = () => {
             weekAverage: rawData.human_readable_total.replace(/\s+/g, ""),
           }
 
-          // console.log(wakaStats)
           setWakaData({ ...wakaStats })
           setUpdateComponent(prevState => prevState + 1)
 
@@ -43,7 +46,6 @@ const AboutMe = () => {
         })
     }
 
-    // console.log("wakaData abaix", wakaData)
 
   }, [wakaData])
 
@@ -60,7 +62,7 @@ const AboutMe = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.7 }}
             style={{ willChange: "opacity" }}
-          >Sobre Mim
+          >{text('about.title')}
           </motion.span>
 
           {/* Detalhe de layout */}
@@ -97,24 +99,24 @@ const AboutMe = () => {
 
                 <div className='flex flex-col p-4'>
                   <span className='inline-block text-4xl text-zinc-200 font-medium max-sm:text-center'>Tailison Ramos</span>
-                  <span className='inline-block text-zinc-400 text-2xl max-sm:text-center'>24 anos</span>
+                  <span className='inline-block text-zinc-400 text-2xl max-sm:text-center'>{age} {text("about.years")}</span>
                 </div>
 
 
                 <div className='flex gap-x-12 bg-gradient-to-r from-green-600 to-green-500 rounded-lg p-4 max-md:gap-x-4 max-sm:justify-center max-sm:gap-x-6'>
 
                   <div className='flex justify-center items-center flex-col'>
-                    <p className='text-zinc-200 font-medium max-sm:text-sm'>Código Diário</p>
+                    <p className='text-zinc-200 font-medium max-sm:text-sm'>{text("about.dailyCode")}</p>
                     <span key={updateComponent} className='text-3xl font-bold text-zinc-100 max-lg:text-xl transition-all max-md:text-lg'>{wakaData ? wakaData?.dailyAverage : '...'}</span>
                   </div>
 
                   <div className=' flex justify-center items-center flex-col'>
-                    <p className='text-zinc-200 font-medium max-sm:text-sm'>Código Semanal</p>
+                    <p className='text-zinc-200 font-medium max-sm:text-sm'>{text("about.weeklyCode")}</p>
                     <span className='text-3xl font-bold text-zinc-100 max-lg:text-xl transition-all max-md:text-lg'>{wakaData ? wakaData.weekAverage : '...'}</span>
                   </div>
 
                   <div className=' flex justify-center items-center flex-col'>
-                    <p className='text-zinc-200 font-medium max-sm:text-sm'>Projetos</p>
+                    <p className='text-zinc-200 font-medium max-sm:text-sm'>{text("about.projects")}</p>
                     <span className='text-3xl font-bold text-zinc-100 max-lg:text-xl transition-all max-md:text-lg'>5</span>
                   </div>
 
@@ -131,14 +133,14 @@ const AboutMe = () => {
 
               <div className=' rounded-lg h-fit w-full p-4 pt-12 absolute -top-6 -z-10'>
 
-                <p className='text-2xl text-green-500 font-bold'>Quem sou eu?</p>
-                <p className='text-xl max-md:text-lg max-sm:text-sm text-zinc-300 font-normal transition-all'>Sou um aspirante a desenvolvedor full-stack apaixonado por tecnologia e inovação. </p>
+                <p className='text-2xl text-green-500 font-bold'>{text("about.whoIam.title")}</p>
+                <p className='text-xl max-md:text-lg max-sm:text-sm text-zinc-300 font-normal transition-all'>{text("about.whoIam.description")}</p>
 
-                <p className='text-2xl text-green-500 font-bold mt-4'>O que estou fazendo?</p>
-                <p className='text-xl max-md:text-lg max-sm:text-sm text-zinc-300 font-normal transition-all'>Atualmente, estou cursando Análise e Desenvolvimento de Sistemas para expandir meus conhecimentos e aprimorar minhas habilidades no desenvolvimento web.</p>
+                <p className='text-2xl text-green-500 font-bold mt-4'>{text("about.whatIamDoing.title")}</p>
+                <p className='text-xl max-md:text-lg max-sm:text-sm text-zinc-300 font-normal transition-all'>{text("about.whatIamDoing.description")}</p>
 
-                <p className='text-2xl text-green-500 font-bold mt-4'>Com o que trabalho?</p>
-                <p className='text-xl max-md:text-lg max-sm:text-sm text-zinc-300 font-normal transition-all'>Estou focado em aprender as melhores práticas utilizando React/Native na criação de interfaces modernas e reutilizáveis. Para a criação de projetos completos, busco conhecimento em linguagens SQL e NoSQL, como Postgres e Firebase, utilizando NodeJs no servidor.</p>
+                <p className='text-2xl text-green-500 font-bold mt-4'>{text("about.whatAmIworkingOn.title")}</p>
+                <p className='text-xl max-md:text-lg max-sm:text-sm text-zinc-300 font-normal transition-all'>{text("about.whatAmIworkingOn.description")}</p>
 
 
               </div>

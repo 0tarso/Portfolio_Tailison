@@ -8,6 +8,7 @@ import TechBadge from '../techBadge'
 
 //Framer motion
 import { motion } from 'motion/react'
+import { useTranslation } from 'react-i18next'
 
 
 type Techs =
@@ -35,6 +36,8 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = (props: ProjectCardProps) => {
+  const { t: text } = useTranslation();
+
   return (
 
     <motion.div key={props.projectName} className='bg-white rounded-2xl flex flex-col mb-24 max-sm:mb-12 transition-all  max-md:flex-col max-md:pb-4 max-md:w-[90%] border-b-4 hover:border-b-green-500 max-sm:border-b-green-500 h-[600px] max-sm:h-fit opacity-0'
@@ -49,7 +52,7 @@ const ProjectCard = (props: ProjectCardProps) => {
 
         <div className='backdrop-blur-sm bg-green-900/40 w-full h-full absolute z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center rounded-xl'>
 
-          <span className='mb-4 text-white font-bold max-sm:mb-1'>Onde encontrar esse projeto</span>
+          <span className='mb-4 text-white font-bold max-sm:mb-1'>{text("projects.whereFindProject")}</span>
 
           <a className='bg-white/60 p-2 rounded-lg flex items-center gap-x-1 mb-4 cursor-pointer hover:scale-105 transiton-all hover:bg-white/80 duration-500 w-2/4 justify-center max-sm:scale-90 max-sm:mb-2'
             href={props.gitHubLink}
