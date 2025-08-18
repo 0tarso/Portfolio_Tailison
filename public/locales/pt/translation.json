@@ -15,8 +15,8 @@
   "hero": {
     "title": "Desenvolvedor",
     "subtitle": "Olá, sou o Tailison Ramos",
-    "overview": "Estudante e desenvolvedor full-stack buscando se especializar em aplicações web e mobile utilizando ferramentas como",
-    "reactAndType": " React e TypeScript.",
+    "overview": "Estudante e desenvolvedor fullstack buscando se especializar em aplicações mobile utilizando ferramentas como",
+    "reactAndType": " React Native e TypeScript.",
     "linkedin": "Linkedin",
     "curriculum": "Currículo",
     "scrollBottom": "Ver mais"
@@ -46,11 +46,11 @@
     "projects": "Projetos",
     "whoIam": {
       "title": "Quem sou eu?",
-      "description": "Sou um aspirante a desenvolvedor full-stack apaixonado por tecnologia e inovação."
+      "description": "Sou desenvolvedor fullstack apaixonado por tecnologia e inovação. Estou buscando me especializar em aplicativos mobile híbridos."
     },
     "whatIamDoing": {
       "title": "O que estou fazendo?",
-      "description": "Atualmente, estou cursando Análise e Desenvolvimento de Sistemas para expandir meus conhecimentos e aprimorar minhas habilidades no desenvolvimento web."
+      "description": "Atualmente, estou cursando Análise e Desenvolvimento de Sistemas para expandir meus conhecimentos e aprimorar minhas habilidades analíticas em geral."
     },
     "whatAmIworkingOn": {
       "title": "No que estou trabalhando?",

@@ -75,7 +75,7 @@ const CallMe = () => {
       reset()
 
       setEmailSent(true)
-      // console.log("Email enviado com sucesso!")
+      console.log("Email enviado com sucesso!")
 
     } catch (error) {
       console.log("Erroooo", error)
@@ -221,8 +221,8 @@ const CallMe = () => {
           >
             <div className='bg-green-600 w-full h-fit rounded-lg flex flex-col items-center p-8 '>
               <span className='text-zinc-100 text-7xl font-bold max-sm:text-5xl max-sm:self-start'>Olá, {visitorData?.name}</span>
-              <span className='mt-6 text-2xl font-medium text-zinc-800'>{text("formSuccess.title")}</span>
-              <span className='text-2xl font-medium text-zinc-800'>{text("formSuccess.description")}</span>
+              <span className='mt-6 text-2xl font-medium text-zinc-800'>{text("callMe.formSuccess.title")}</span>
+              <span className='text-2xl font-medium text-zinc-800'>{text("callMe.formSuccess.description")}</span>
 
               <button className='bg-white w-2/4 max-sm:w-full py-4 mt-8 max-sm:mt-2 rounded-tl-md rounded-tr-md rounded-bl-2xl rounded-br-md text-green-800 font-bold text-2xl drop-shadow-md hover:scale-[1.02] hover:bg-green-400 hover:text-white transition-all duration-500'
                 onClick={() => setEmailSent(!emailSent)}

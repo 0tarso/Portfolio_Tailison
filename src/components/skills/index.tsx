@@ -60,8 +60,8 @@ const Skills = () => {
               <StackProgress progress={70} stack='JavaScript' />
               <StackProgress progress={60} stack='React' />
               <StackProgress progress={44} stack='Tailwind' />
-              <StackProgress progress={49} stack='TypeScript' />
-              <StackProgress progress={54} stack='ReactNative' />
+              <StackProgress progress={60} stack='TypeScript' />
+              <StackProgress progress={58} stack='ReactNative' />
 
             </motion.div>
 
@@ -76,7 +76,7 @@ const Skills = () => {
 
               <StackProgress progress={35} stack='PostgreSQL' />
               <StackProgress progress={60} stack='Firebase' />
-              <StackProgress progress={55} stack='Node' />
+              <StackProgress progress={65} stack='Node' />
               <StackProgress progress={60} stack='Express' />
               <StackProgress progress={30} stack='PrismaORM' />
               <StackProgress progress={35} stack='Python' />

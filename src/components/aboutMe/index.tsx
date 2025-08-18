@@ -8,7 +8,8 @@ import Container from '../container'
 import { motion } from 'motion/react'
 
 //Asset
-import profileImg from '../../assets/profileImg.png'
+// import profileImg from '../../assets/profileImg.png'
+import profileImg from '../../assets/HeroImage.png'
 import { useTranslation } from 'react-i18next'
 
 type WakaData = {
@@ -88,8 +89,8 @@ const AboutMe = () => {
             <div className=' flex flex-row mt-12 w-full transition-all item-center justify-start max-sm:flex-col max-sm:items-center'>
 
 
-              <div className='overflow-hidden rounded-full flex h-fit w-64 items-center shadow-xl shadow-green-400/30 bg-red-500 ml-6 hover:scale-105 transition-all'>
-                <img src={profileImg} className='object-cover rounded-full' />
+              <div className='overflow-hidden rounded-full flex h-64 w-64 items-center shadow-xl shadow-green-400/30  ml-6 hover:scale-105 transition-all'>
+                <img src={profileImg} className='object-cover rounded-full mt-24 saturate-[0.75]' />
               </div>
 
 
@@ -115,10 +116,10 @@ const AboutMe = () => {
                     <span className='text-3xl font-bold text-zinc-100 max-lg:text-xl transition-all max-md:text-lg'>{wakaData ? wakaData.weekAverage : '...'}</span>
                   </div>
 
-                  <div className=' flex justify-center items-center flex-col'>
+                  {/* <div className=' flex justify-center items-center flex-col'>
                     <p className='text-zinc-200 font-medium max-sm:text-sm'>{text("about.projects")}</p>
                     <span className='text-3xl font-bold text-zinc-100 max-lg:text-xl transition-all max-md:text-lg'>5</span>
-                  </div>
+                  </div> */}
 
                 </div>
 
