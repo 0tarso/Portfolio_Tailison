@@ -3,6 +3,10 @@ import { FaLinkedin } from 'react-icons/fa'
 import { FaSquareGithub } from 'react-icons/fa6'
 
 const Footer = () => {
+
+  const hrefLinkedin = 'https://www.linkedin.com/in/tailison'
+  const hrefGitHub = 'https://github.com/0tarso'
+
   return (
     <div className='h-[150px] max-sm:h-fit pt-5 w-full bg-gradient-to-t from-green-600 to-green-500 flex flex-col justify-around'>
 
@@ -15,16 +19,16 @@ const Footer = () => {
           <div className=' flex justify-center pt-2 flex-row gap-y-2 gap-x-2'>
 
             <a className='flex items-end max-sm:mr-12 cursor-pointer hover:bg-white p-2 rounded-xl transition-all duration-500'
-              href='https://www.linkedin.com/in/0tarsodev'
+              href={hrefLinkedin}
               target='_blank'
               rel='noopener noreferer'
             >
               <FaLinkedin size={36} color='#1e1e20' />
-              <span className='max-sm:block text-xl'>/0tarsodev</span>
+              <span className='max-sm:block text-xl'>/tailison</span>
             </a>
 
             <a className='flex items-end cursor-pointer hover:bg-white p-2 rounded-xl transition-all duration-500'
-              href='https://www.github.com/0tarso'
+              href={hrefGitHub}
               target='_blank'
               rel='noopener noreferer'
             >
