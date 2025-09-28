@@ -20,7 +20,10 @@ type WakaData = {
 const AboutMe = () => {
   const { t: text } = useTranslation()
 
-  const age = new Date().getFullYear() - 2000
+  // const hrefGitStreakStatus = 'https://github-readme-streak-stats.herokuapp.com/?user=0tarso&theme=vue&hide_border=true'
+
+  const birthDayAge = 2000
+  const age = new Date().getFullYear() - birthDayAge
 
   const [wakaData, setWakaData] = useState<WakaData | null>()
   const [updateComponent, setUpdateComponent] = useState<number>(0)
@@ -30,27 +33,21 @@ const AboutMe = () => {
       fetch(`/api/wakatime`)
         .then(res => res.json())
         .then(dataResponse => {
-
           const rawData = dataResponse.data.data
-
           const wakaStats = {
             dailyAverage: rawData.human_readable_daily_average.replace(/\s+/g, ""),
             weekAverage: rawData.human_readable_total.replace(/\s+/g, ""),
           }
 
+          console.log(wakaStats)
           setWakaData({ ...wakaStats })
           setUpdateComponent(prevState => prevState + 1)
-
         })
         .catch(error => {
           console.log(error)
         })
     }
-
-
   }, [wakaData])
-
-
 
 
   return (
@@ -105,6 +102,11 @@ const AboutMe = () => {
 
 
                 <div className='flex gap-x-12 bg-gradient-to-r from-green-600 to-green-500 rounded-lg p-4 max-md:gap-x-4 max-sm:justify-center max-sm:gap-x-6'>
+
+                  {/* <img
+                    className='h-40'
+                    src={hrefGitStreakStatus}
+                  /> */}
 
                   <div className='flex justify-center items-center flex-col'>
                     <p className='text-zinc-200 font-medium max-sm:text-sm'>{text("about.dailyCode")}</p>

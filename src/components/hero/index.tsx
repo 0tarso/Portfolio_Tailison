@@ -27,8 +27,10 @@ const Hero = () => {
 
 	const [changeLayout, setChangeLayout] = useState(false)
 
-	const curriculoLink = 'https://drive.google.com/file/d/1nMoUgjzOu3RpQbRA-JfaOxYNUh3sJQLg/view?usp=drive_link'
-	const arquivoCurriculo = 'CV-TailisonRamosDev.pdf'
+	const hrefCurriculoLink = 'https://drive.google.com/file/d/16xgRw-kFYVMUcunjz-PqsLDOIYLaRLex/view?usp=sharing'
+	const downloadArquivoCurriculo = 'Tailison_Ramos_Dev_Fullstack.pdf'
+
+	const hrefLinkedin = 'https://www.linkedin.com/in/tailison'
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -52,13 +54,12 @@ const Hero = () => {
 
 			<Container>
 
-				<div id='home' className=' h-screen flex flex-col items-center max-lg:items-start max-lg:mb-64 mb-60 max-sm:mb-32 justify-center'>
+				<div id='home' className='h-screen flex flex-col items-center max-lg:items-start max-lg:mb-64 mb-60 max-sm:mb-32 justify-center'>
 
-					<section className=' relative w-full pt-24 flex flex-row max-md:flex-col transition-all max-lg:mt-44 max-sm:mt-0 max-sm:pt-20'>
+					<section className='relative w-full pt-24 flex flex-row max-md:flex-col transition-all max-lg:mt-44 max-sm:mt-0 max-sm:pt-20'>
 
 						<Ribbon />
 						<div className='max-w-md  flex flex-col justify-between max-lg:max-w-full max-md:max-w-full max-md:mt-0'>
-
 
 							<div className={`${changeLayout ? "flex" : "hidden"} mt-48 transition-all flex items-end h-[350px] max-sm:h-[300px] max-md:mt-28 max-sm:mt-14 justify-end `}
 							>
@@ -96,7 +97,7 @@ const Hero = () => {
 
 								<div className='flex gap-x-4 h-16 max-xl:h-12 transition-all'>
 									<a className='w-full flex gap-x-2 justify-center items-center bg-green-600 font-medium text-white rounded-md hover:bg-green-400 transition-all hover:scale-105'
-										href='https://www.linkedin.com/in/0tarsodev'
+										href={hrefLinkedin}
 										target="_blank"
 										rel='noopener noreferrer'
 									>{text("hero.linkedin")}
@@ -104,8 +105,8 @@ const Hero = () => {
 									</a>
 
 									<a className='w-full flex justify-center items-center bg-green-600 font-medium text-white rounded-md hover:bg-green-400 transition-all hover:scale-105 cursor-pointer'
-										href={curriculoLink}
-										download={arquivoCurriculo}
+										href={hrefCurriculoLink}
+										download={downloadArquivoCurriculo}
 									>
 
 										<button className='flex gap-x-2'>
