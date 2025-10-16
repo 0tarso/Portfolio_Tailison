@@ -27,7 +27,7 @@ const Hero = () => {
 
 	const [changeLayout, setChangeLayout] = useState(false)
 
-	const hrefCurriculoLink = 'https://drive.google.com/file/d/16xgRw-kFYVMUcunjz-PqsLDOIYLaRLex/view?usp=sharing'
+	const hrefCurriculoLink = 'https://drive.google.com/file/d/1mOOccbqSoyblroQaXW2tVHNxj4CFsBqT/view?usp=drive_link'
 	const downloadArquivoCurriculo = 'Tailison_Ramos_Dev_Fullstack.pdf'
 
 	const hrefLinkedin = 'https://www.linkedin.com/in/tailison'
