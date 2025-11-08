@@ -57,6 +57,9 @@
       "description": "I am focused on learning best practices using React/Native in creating modern and reusable interfaces. For the creation of complete projects, I seek knowledge in SQL and NoSQL languages, such as Postgres and Firebase, using NodeJs on the server."
     }
   },
+  "certifications": {
+    "title": "Certificates"
+  },
   "callMe": {
     "title": "Get in Touch",
     "create": "Let's create",

@@ -75,10 +75,11 @@ const CallMe = () => {
       reset()
 
       setEmailSent(true)
-      console.log("Email enviado com sucesso!")
+      // console.log("Email enviado com sucesso!")
 
     } catch (error) {
       console.log("Erroooo", error)
+
     }
 
     finally {
@@ -131,7 +132,7 @@ const CallMe = () => {
           </div>
 
 
-          <div className=' w-full p-6 relative'>
+          <div className=' w-full p-6 max-sm:p-2 relative'>
 
             <div className='bg-white h-full w-full rounded-tl-md rounded-tr-3xl rounded-bl-3xl rounded-br-md p-4 shadow-xl shadow-green-300/20'>
               <div className=''>

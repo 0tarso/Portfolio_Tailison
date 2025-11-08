@@ -8,6 +8,7 @@ import { motion } from 'motion/react'
 import AboutMe from './components/aboutMe'
 import CallMe from './components/callMe'
 import Footer from './components/footer'
+import Certifications from './components/certifications'
 
 function App() {
 
@@ -41,6 +42,8 @@ function App() {
 
 
       <AboutMe />
+
+      <Certifications />
 
 
       <CallMe />

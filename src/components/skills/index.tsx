@@ -77,9 +77,9 @@ const Skills = () => {
               <StackProgress progress={65} stack='Node' />
               <StackProgress progress={60} stack='Express' />
               <StackProgress progress={45} stack='PostgreSQL' />
+              <StackProgress progress={35} stack='MySQL' />
               <StackProgress progress={40} stack='Supabase' />
-              <StackProgress progress={50} stack='Firebase' />
-              <StackProgress progress={30} stack='PrismaORM' />
+              <StackProgress progress={40} stack='Firebase' />
               <StackProgress progress={25} stack='Python' />
 
             </motion.div>
