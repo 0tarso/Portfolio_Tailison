@@ -29,18 +29,64 @@ interface ProjectCardProps {
   stack: Techs[]
   projectName: string
   cardImg: string
-  description: string
-  gitHubLink: string
+  description?: string
+  gitHubLink?: string
   deploymentLink?: string
   linkedInLink?: string
+  cardType?: 'web' | 'design'
 }
 
 const ProjectCard = (props: ProjectCardProps) => {
   const { t: text } = useTranslation();
 
+  if (props.cardType === 'design') {
+    return (
+      <motion.div key={props.projectName} className='bg-white rounded-2xl flex flex-col mb-24 max-sm:mb-12 transition-all  max-md:flex-col max-md:pb-4 max-md:w-[100%] border-b-4 hover:border-b-green-500 max-sm:border-b-green-500 h-fit max-sm:h-fit opacity-0'
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3, }}
+        style={{ willChange: "opacity" }}
+        layout='position'
+      >
+
+        <div className='relative h-[300px] max-md:h-[300px] flex overflow-hidden rounded-xl group shadow-lg shadow-green-200'>
+
+          <div className='backdrop-blur-sm bg-green-900/40 w-full h-full absolute z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center rounded-xl'>
+
+            <span className='mb-4 text-white font-bold max-sm:mb-1'>{text("projects.whereFindProject")}</span>
+
+            {props.deploymentLink && (
+
+              <a className='bg-white/60 p-2 rounded-lg flex items-center gap-x-1 cursor-pointer hover:scale-105 transiton-all hover:bg-white/80 duration-500 w-2/4 justify-center mb-4 max-sm:scale-90 max-sm:mb-2'
+                href={props.deploymentLink}
+                target='_blank'
+                rel='noopener noreferer'
+              >
+                <PiBroadcastBold size={24} />
+                <span className='font-medium'>Live</span>
+              </a>
+            )}
+          </div>
+
+
+          <img src={props.cardImg} className='rounded-lg object-cover border-b-[5px] border-b-green-200 group-hover:border-green-500 transition-all duration-500 group-hover:scale-125 max-md:w-full max-sm:border-b-green-500 w-full' />
+
+        </div>
+
+
+        <div className='flex-1 flex-col px-2'>
+
+          <span className='mt-4 mb-4 max-sm:mb-6 block font-medium text-3xl text-black cursor-default'>{props.projectName}</span>
+
+        </div>
+
+
+      </motion.div >
+    )
+  }
+
   return (
 
-    <motion.div key={props.projectName} className='bg-white rounded-2xl flex flex-col mb-24 max-sm:mb-12 transition-all  max-md:flex-col max-md:pb-4 max-md:w-[90%] border-b-4 hover:border-b-green-500 max-sm:border-b-green-500 h-[600px] max-sm:h-fit opacity-0'
+    <motion.div key={props.projectName} className='bg-white rounded-2xl flex flex-col mb-24 max-sm:mb-12 transition-all  max-md:flex-col max-md:pb-4 max-md:w-[100%] border-b-4 hover:border-b-green-500 max-sm:border-b-green-500 h-[650px] max-sm:h-fit opacity-0'
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.3, }}
       style={{ willChange: "opacity" }}
@@ -54,14 +100,18 @@ const ProjectCard = (props: ProjectCardProps) => {
 
           <span className='mb-4 text-white font-bold max-sm:mb-1'>{text("projects.whereFindProject")}</span>
 
-          <a className='bg-white/60 p-2 rounded-lg flex items-center gap-x-1 mb-4 cursor-pointer hover:scale-105 transiton-all hover:bg-white/80 duration-500 w-2/4 justify-center max-sm:scale-90 max-sm:mb-2'
-            href={props.gitHubLink}
-            target='_blank'
-            rel='noopener noreferer'
-          >
-            <FaGithub size={24} />
-            <span className='font-medium'>GitHub</span>
-          </a>
+          {props.gitHubLink && (
+
+            <a className='bg-white/60 p-2 rounded-lg flex items-center gap-x-1 mb-4 cursor-pointer hover:scale-105 transiton-all hover:bg-white/80 duration-500 w-2/4 justify-center max-sm:scale-90 max-sm:mb-2'
+              href={props.gitHubLink}
+              target='_blank'
+              rel='noopener noreferer'
+            >
+              <FaGithub size={24} />
+              <span className='font-medium'>GitHub</span>
+            </a>
+
+          )}
 
           {props.deploymentLink && (
 
@@ -96,21 +146,28 @@ const ProjectCard = (props: ProjectCardProps) => {
       </div>
 
 
-      <div className='h-full flex-1  flex-col px-2'>
+      <div className='flex-1 flex-col px-2'>
 
-        <span className='mt-4 mb-2 max-sm:mb-6 block font-medium text-3xl text-black cursor-default'>{props.projectName}</span>
+        <span className='mt-4 mb-4 max-sm:mb-6 block font-medium text-3xl text-black cursor-default'>{props.projectName}</span>
 
-        <p className='text-zinc-600 p-1 cursor-default'>{props.description}</p>
+        {props.description && (
+          <p className='text-zinc-600 p-1 cursor-default min-w-80 pb-10'>{props.description}</p>
 
-        <div className='mb-4 mt-3 flex flex-wrap gap-x-2 gap-y-2'>
+        )}
 
-          {props.stack.map((tech) => (
-            <TechBadge key={tech} tech={tech} />
-          ))}
+        {props.stack.length > 0 && (
+          <div className='mb-4  flex flex-wrap gap-x-2 gap-y-2'>
 
-        </div>
+            {props.stack.map((tech) => (
+              <TechBadge key={tech} tech={tech} />
+            ))}
+
+          </div>
+
+        )}
 
       </div>
+
 
     </motion.div >
   )

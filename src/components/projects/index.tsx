@@ -3,6 +3,10 @@ import prepcarsPage from '../../assets/prepPag.png'
 import portfolioPage from '../../assets/portfolioImg.png'
 import encurtandoPage from '../../assets/encurtandoPag.png'
 
+import correDesign from '../../assets/corredesign.png'
+import itabaratoDesgin from '../../assets/itabaratodesign.png'
+import zkiDesign from '../../assets/zkidesign.png'
+
 
 //Components
 import Container from '../container'
@@ -43,7 +47,17 @@ const Projects = () => {
 
         </div>
 
-        <div className=' grid grid-cols-3 place-items-center gap-8 max-md:gap-2 max-xl:grid-cols-2 max-md:grid-cols-1'>
+        <motion.span className='block w-fit text-white text-4xl font-regular max-sm:text-2xl mb-8 mt-8'
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          style={{ willChange: "opacity" }}
+        >Web Projects
+        </motion.span>
+
+        <div className=' grid grid-cols-3 place-items-stretch gap-8 max-md:gap-2 max-xl:grid-cols-2 max-md:grid-cols-1'>
+
+
           <ProjectCard
             cardImg={prepcarsPage}
             projectName='PrepCars'
@@ -51,7 +65,6 @@ const Projects = () => {
             description={text('projects.prepcars.description')}
             deploymentLink='https://prepcars.vercel.app/'
             gitHubLink='https://github.com/0tarso/PrepCars-ReactJS'
-
           />
 
           <ProjectCard
@@ -71,6 +84,48 @@ const Projects = () => {
             description={text('projects.tailisonDev.description')}
             linkedInLink='...'
             gitHubLink='...'
+          />
+        </div>
+
+
+
+
+        <motion.span className='block w-fit text-white text-4xl font-regular max-sm:text-2xl mb-8 mt-8'
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          style={{ willChange: "opacity" }}
+        >Social Media Projects
+        </motion.span>
+
+        <div className=' grid grid-cols-3 gap-8 max-md:gap-2 max-xl:grid-cols-2 max-md:grid-cols-1'>
+
+          <ProjectCard
+            cardImg={zkiDesign}
+            projectName='Zki Piscinas'
+            stack={[]}
+            cardType='design'
+            // description={text('projects.prepcars.description')}
+            deploymentLink='https://drive.google.com/file/d/1NgK4SuLDaLHx9bfP1URji0oRFmIo7EC0/view?usp=sharing'
+          // gitHubLink=''
+          />
+
+          <ProjectCard
+            cardImg={itabaratoDesgin}
+            projectName='Mercado ItaBarato'
+            stack={[]}
+            cardType='design'
+            // description={text('projects.encurtando.description')}
+            deploymentLink='https://drive.google.com/file/d/1M0-3B3YWMDbmNdoohnqI-oqehUNJzg4G/view?usp=sharing'
+          />
+
+          <ProjectCard
+            cardImg={correDesign}
+            projectName='Corre Multiserviços'
+            stack={[]}
+            cardType='design'
+            // description={text('projects.tailisonDev.description')}
+            deploymentLink='https://drive.google.com/file/d/1FlxWcf-iit9t-EcNwmsCnxUHoApBp8yM/view?usp=sharing'
           />
         </div>
 
