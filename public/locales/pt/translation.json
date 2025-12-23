@@ -32,6 +32,9 @@
     "tailisonDev": {
       "description": "Meu primeiro portfólio. Aqui, usei as habilidades que adquiri até o momento para apresentar um pouco sobre mim a você. Espero que goste!"
     },
+    "maiconLandingPage": {
+      "description": "Landing page desenvolvida utilizando boas práticas de responsividade. Buscando entregar uma boa experiência e design em todos os formatos."
+    },
     "whereFindProject": "Onde encontrar o projeto"
   },
   "skills": {

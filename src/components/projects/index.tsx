@@ -2,6 +2,7 @@
 import prepcarsPage from '../../assets/prepPag.png'
 import portfolioPage from '../../assets/portfolioImg.png'
 import encurtandoPage from '../../assets/encurtandoPag.png'
+import maiconPage from '../../assets/maiconPag.png'
 
 import correDesign from '../../assets/corredesign.png'
 import itabaratoDesgin from '../../assets/itabaratodesign.png'
@@ -75,6 +76,14 @@ const Projects = () => {
             linkedInLink='https://www.linkedin.com/posts/0tarsodev_react-nodejs-vite-activity-7284577439949705218-2Rzl?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMBAUABqnfFxb1lWRc-PSTPvy7KqtDmHvQ'
             gitHubLink='https://github.com/0tarso/Encurtando--Full'
             deploymentLink='https://www.encurtando.com/'
+          />
+          <ProjectCard
+            cardImg={maiconPage}
+            projectName='Maicon Luchese'
+            stack={['TypeScript', 'React', 'Tailwind', 'Vercel', 'FramerMotion']}
+            description={text('projects.maiconLandingPage.description')}
+            gitHubLink='https://github.com/0tarso/ml-landing-page'
+            deploymentLink='https://mluchese.vercel.app/'
           />
 
           <ProjectCard
