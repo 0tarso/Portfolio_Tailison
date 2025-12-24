@@ -7,6 +7,7 @@ import maiconPage from '../../assets/maiconPag.png'
 import correDesign from '../../assets/corredesign.png'
 import itabaratoDesgin from '../../assets/itabaratodesign.png'
 import zkiDesign from '../../assets/zkidesign.png'
+import ultramedDesign from '../../assets/ultrameddesign.png'
 
 
 //Components
@@ -107,7 +108,7 @@ const Projects = () => {
         >Social Media Projects
         </motion.span>
 
-        <div className=' grid grid-cols-3 gap-8 max-md:gap-2 max-xl:grid-cols-2 max-md:grid-cols-1'>
+        <div className=' grid grid-cols-3 gap-8 gap-y-0 max-md:gap-2 max-xl:grid-cols-2 max-md:grid-cols-1'>
 
           <ProjectCard
             cardImg={zkiDesign}
@@ -135,6 +136,14 @@ const Projects = () => {
             cardType='design'
             // description={text('projects.tailisonDev.description')}
             deploymentLink='https://drive.google.com/file/d/1FlxWcf-iit9t-EcNwmsCnxUHoApBp8yM/view?usp=sharing'
+          />
+          <ProjectCard
+            cardImg={ultramedDesign}
+            projectName='Ultramed Popular'
+            stack={[]}
+            cardType='design'
+            // description={text('projects.tailisonDev.description')}
+            deploymentLink='https://drive.google.com/drive/folders/1wDfwSvQYArbwPFwZSTjNHtyieskjmi-W?usp=sharing'
           />
         </div>
 
