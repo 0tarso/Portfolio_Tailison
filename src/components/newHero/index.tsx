@@ -7,7 +7,7 @@ import MotionDiv from '../motionDiv'
 import Ribbon from '../ribbon/Ribbon'
 
 //Assets
-import tarsDevImg from '../../assets/HeroImageDraw.png'
+import tarsDevImg from '../../assets/HeroImageDrawWeb.webp'
 
 //FramerMotion
 import { motion } from "motion/react"
