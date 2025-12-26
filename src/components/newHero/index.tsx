@@ -1,6 +1,5 @@
 //React
-import React, { useEffect, useState } from 'react'
-import ReactCompareImage from 'react-compare-image';
+import { useEffect, useState } from 'react'
 
 //Component
 import Container from '../container'
@@ -8,13 +7,7 @@ import MotionDiv from '../motionDiv'
 import Ribbon from '../ribbon/Ribbon'
 
 //Assets
-import devImg from '../../assets/dev.png'
-import nodeImg from '../../assets/nodeLogo.png'
-import jsLogo from '../../assets/jsLogo.png'
-import reactLogo from '../../assets/react.png'
-
 import tarsDevImg from '../../assets/HeroImageDraw.png'
-import tarsDevImg2 from '../../assets/HeroImage.png'
 
 //FramerMotion
 import { motion } from "motion/react"

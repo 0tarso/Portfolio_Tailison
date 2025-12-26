@@ -1,5 +1,4 @@
 import Header from './components/header'
-import Hero from './components/hero'
 import Projects from './components/projects'
 import ScrollLinked from './components/scrollLinked'
 import Skills from './components/skills'

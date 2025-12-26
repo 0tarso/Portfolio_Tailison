@@ -12,8 +12,6 @@ import nodeImg from '../../assets/nodeLogo.png'
 import jsLogo from '../../assets/jsLogo.png'
 import reactLogo from '../../assets/react.png'
 
-import tarsDevImg from '../../assets/HeroImageDraw.png'
-
 //FramerMotion
 import { motion } from "motion/react"
 
