@@ -15,7 +15,7 @@
   "hero": {
     "title": "Developer",
     "subtitle": "Hello, I'm Tailison Ramos",
-    "overview": "Fullstack developer and student looking to specialize in mobile applications using tools like",
+    "overview": "I am a student in the field of development and design, seeking to specialize in mobile applications using tools such as",
     "reactAndType": " React Native and TypeScript.",
     "linkedin": "Linkedin",
     "curriculum": "Curriculum",
@@ -34,6 +34,9 @@
     },
     "maiconLandingPage": {
       "description": "The landing page was developed using the best responsive design practices. The aim is to deliver a good experience and design in all formats."
+    },
+    "vendazenLandingPage": {
+      "description": "This project was developed for the VendaZen app presentation. The site is simple and minimalist, aiming to convey the same feeling as the app to the audience."
     },
     "whereFindProject": "Where to find the project"
   },

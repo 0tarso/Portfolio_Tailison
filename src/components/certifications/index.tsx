@@ -90,7 +90,6 @@ export default function Certifications() {
         </motion.div>
 
       </div>
-
     </Container>
   )
 }

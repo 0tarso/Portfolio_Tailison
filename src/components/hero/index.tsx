@@ -12,6 +12,8 @@ import nodeImg from '../../assets/nodeLogo.png'
 import jsLogo from '../../assets/jsLogo.png'
 import reactLogo from '../../assets/react.png'
 
+import tarsDevImg from '../../assets/HeroImageDraw.png'
+
 //FramerMotion
 import { motion } from "motion/react"
 
@@ -85,7 +87,7 @@ const Hero = () => {
 							</div>
 
 
-							<div className='relative transition-all flex justify-end flex-col h-full'					>
+							<div className='relative transition-all flex justify-end flex-col h-full'>
 
 								<h2 className='font-black text-green-500 text-3xl max-lg:text-5xl transition-all max-lg:mt-4 max-sm:text-3xl max-sm:mt-0'>{text("hero.subtitle")}</h2>
 

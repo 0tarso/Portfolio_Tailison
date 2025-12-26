@@ -9,6 +9,8 @@ import AboutMe from './components/aboutMe'
 import CallMe from './components/callMe'
 import Footer from './components/footer'
 import Certifications from './components/certifications'
+import NewHero from './components/newHero'
+import { ParticlesComponent } from './components/particles'
 
 function App() {
 
@@ -19,8 +21,10 @@ function App() {
 
       <Header />
 
-      <Hero />
+      {/* <Hero /> */}
 
+
+      <NewHero />
       <div className='relative' id='projects' >
         <Projects />
         <div className='absolute -z-50 w-full h-9 bg-green-600 opacity-5'></div>
@@ -49,8 +53,11 @@ function App() {
       <CallMe />
 
       <Footer />
+      <div className='absolute -z-50'>
 
-    </div>
+        <ParticlesComponent />
+      </div>
+    </div >
   )
 }
 

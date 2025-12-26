@@ -40,14 +40,14 @@ const Ribbon = () => {
     }, [indexTech])
 
     return (
-        <motion.div className='absolute'
+        <motion.div className=''
             initial={{ translateX: "-500px", opacity: 0 }}
             animate={{ opacity: 1, translateX: 0 }}
             transition={{ duration: 1.5, delay: 0.5 }}
             style={{ willChange: "opacity, transform" }}
         >
-            <h1 className='text-7xl font-bold text-white max-lg:text-6xl transition-all max-sm:text-5xl'>{text("hero.title")}</h1>
-            <span className='text-7xl text-green-500 font-bold max-lg:text-5xl max-xl:text-5xl'>{tech}</span>
+            <h1 className='text-7xl font-bold text-white max-lg:text-6xl transition-all max-sm:text-2xl'>{text("hero.title")}</h1>
+            <span className='text-7xl max-sm:text-white text-green-500 font-bold max-lg:text-5xl max-xl:text-5xl'>{tech}</span>
         </motion.div>
     )
 }

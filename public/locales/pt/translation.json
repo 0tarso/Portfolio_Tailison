@@ -15,7 +15,7 @@
   "hero": {
     "title": "Desenvolvedor",
     "subtitle": "Olá, sou o Tailison Ramos",
-    "overview": "Estudante e desenvolvedor fullstack buscando se especializar em aplicações mobile utilizando ferramentas como",
+    "overview": "Estudante na área de desenvolvimento e design buscando se especializar em aplicações mobile utilizando ferramentas como",
     "reactAndType": " React Native e TypeScript.",
     "linkedin": "Linkedin",
     "curriculum": "Currículo",
@@ -34,6 +34,9 @@
     },
     "maiconLandingPage": {
       "description": "Landing page desenvolvida utilizando boas práticas de responsividade. Buscando entregar uma boa experiência e design em todos os formatos."
+    },
+    "vendazenLandingPage": {
+      "description": "Projeto desenvolvido para apresentação do app VendaZen. Site simples e minimalista buscando trazer a mesma sensação do aplicativo para o público."
     },
     "whereFindProject": "Onde encontrar o projeto"
   },

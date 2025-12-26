@@ -3,6 +3,7 @@ import prepcarsPage from '../../assets/prepPag.png'
 import portfolioPage from '../../assets/portfolioImg.png'
 import encurtandoPage from '../../assets/encurtandoPag.png'
 import maiconPage from '../../assets/maiconPag.png'
+import vendazenPage from '../../assets/vendazenPage.png'
 
 import correDesign from '../../assets/corredesign.png'
 import itabaratoDesgin from '../../assets/itabaratodesign.png'
@@ -85,6 +86,15 @@ const Projects = () => {
             description={text('projects.maiconLandingPage.description')}
             gitHubLink='https://github.com/0tarso/ml-landing-page'
             deploymentLink='https://mluchese.vercel.app/'
+          />
+
+          <ProjectCard
+            cardImg={vendazenPage}
+            projectName='Vendazen App LP'
+            stack={['TypeScript', 'React', 'Tailwind', 'Vercel']}
+            description={text('projects.vendazenLandingPage.description')}
+            gitHubLink='https://github.com/0tarso/vendazen-landing-page'
+            deploymentLink='https://vendazen.vercel.app/'
           />
 
           <ProjectCard
