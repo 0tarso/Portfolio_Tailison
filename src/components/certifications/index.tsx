@@ -21,7 +21,7 @@ export default function Certifications() {
 
   return (
     <Container>
-      <div className='mt-40 pt-12' id='certifications'>
+      <div className='mt-52 pt-12' id='certifications'>
 
         <div className=''>
           <motion.span className='w-fit text-white text-6xl font-bold max-sm:text-4xl'

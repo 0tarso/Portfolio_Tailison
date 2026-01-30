@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 
 //Component
 import Container from '../container'
+import { GitHubCalendar } from "react-github-calendar";
 
 //FramerMotion
 import { motion } from 'motion/react'
@@ -27,6 +28,12 @@ const AboutMe = () => {
 
   const [wakaData, setWakaData] = useState<WakaData | null>()
   const [updateComponent, setUpdateComponent] = useState<number>(0)
+
+
+  const explicitTheme = {
+    light: ['#f0f0f0', '#c4edde', '#7ac7c4', '#f73859', '#384259'],
+    dark: ['#191919', '#2b2b2b', '#5b5b5b', '#929292', '#ededed'],
+  }
 
   useEffect(() => {
     if (!wakaData) {
@@ -103,11 +110,24 @@ const AboutMe = () => {
 
                 <div className='flex gap-x-12 bg-gradient-to-r from-green-600 to-green-500 rounded-lg p-4 max-md:gap-x-4 max-sm:justify-center max-sm:gap-x-6'>
 
+                  <GitHubCalendar
+                    username="0tarso"
+                    blockSize={5}
+                    blockMargin={1}
+                    fontSize={10}
+                    blockRadius={1}
+                    year={2026}
+                    colorScheme='dark'
+                    theme={explicitTheme}
+                  />
+
                   {/* <img
                     className='h-40'
                     src={hrefGitStreakStatus}
                   /> */}
 
+
+                  {/* 
                   <div className='flex justify-center items-center flex-col'>
                     <p className='text-zinc-200 font-medium max-sm:text-sm'>{text("about.dailyCode")}</p>
                     <span key={updateComponent} className='text-3xl font-bold text-zinc-100 max-lg:text-xl transition-all max-md:text-lg'>{wakaData ? wakaData?.dailyAverage : '...'}</span>
@@ -116,7 +136,8 @@ const AboutMe = () => {
                   <div className=' flex justify-center items-center flex-col'>
                     <p className='text-zinc-200 font-medium max-sm:text-sm'>{text("about.weeklyCode")}</p>
                     <span className='text-3xl font-bold text-zinc-100 max-lg:text-xl transition-all max-md:text-lg'>{wakaData ? wakaData.weekAverage : '...'}</span>
-                  </div>
+                  </div> */}
+
 
                   {/* <div className=' flex justify-center items-center flex-col'>
                     <p className='text-zinc-200 font-medium max-sm:text-sm'>{text("about.projects")}</p>
