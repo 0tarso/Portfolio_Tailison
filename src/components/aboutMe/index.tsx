@@ -1,5 +1,5 @@
 //React
-import { useEffect, useState } from 'react'
+// import { useState } from 'react'
 
 //Component
 import Container from '../container'
@@ -13,10 +13,10 @@ import { motion } from 'motion/react'
 import profileImg from '../../assets/HeroImage.png'
 import { useTranslation } from 'react-i18next'
 
-type WakaData = {
-  dailyAverage: string,
-  weekAverage: string
-}
+// type WakaData = {
+//   dailyAverage: string,
+//   weekAverage: string
+// }
 
 const AboutMe = () => {
   const { t: text } = useTranslation()
@@ -26,8 +26,8 @@ const AboutMe = () => {
   const birthDayAge = 2000
   const age = new Date().getFullYear() - birthDayAge
 
-  const [wakaData, setWakaData] = useState<WakaData | null>()
-  const [updateComponent, setUpdateComponent] = useState<number>(0)
+  // const [wakaData, setWakaData] = useState<WakaData | null>()
+  // const [updateComponent, setUpdateComponent] = useState<number>(0)
 
 
   const explicitTheme = {
@@ -35,26 +35,26 @@ const AboutMe = () => {
     dark: ['#191919', '#2b2b2b', '#5b5b5b', '#929292', '#ededed'],
   }
 
-  useEffect(() => {
-    if (!wakaData) {
-      fetch(`/api/wakatime`)
-        .then(res => res.json())
-        .then(dataResponse => {
-          const rawData = dataResponse.data.data
-          const wakaStats = {
-            dailyAverage: rawData.human_readable_daily_average.replace(/\s+/g, ""),
-            weekAverage: rawData.human_readable_total.replace(/\s+/g, ""),
-          }
+  // useEffect(() => {
+  //   if (!wakaData) {
+  //     fetch(`/api/wakatime`)
+  //       .then(res => res.json())
+  //       .then(dataResponse => {
+  //         const rawData = dataResponse.data.data
+  //         const wakaStats = {
+  //           dailyAverage: rawData.human_readable_daily_average.replace(/\s+/g, ""),
+  //           weekAverage: rawData.human_readable_total.replace(/\s+/g, ""),
+  //         }
 
-          console.log(wakaStats)
-          setWakaData({ ...wakaStats })
-          setUpdateComponent(prevState => prevState + 1)
-        })
-        .catch(error => {
-          console.log(error)
-        })
-    }
-  }, [wakaData])
+  //         console.log(wakaStats)
+  //         setWakaData({ ...wakaStats })
+  //         setUpdateComponent(prevState => prevState + 1)
+  //       })
+  //       .catch(error => {
+  //         console.log(error)
+  //       })
+  //   }
+  // }, [wakaData])
 
 
   return (
