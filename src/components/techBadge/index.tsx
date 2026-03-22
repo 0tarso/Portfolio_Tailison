@@ -5,8 +5,8 @@ import { JSX, memo } from 'react'
 import { IoLogoCss3 } from 'react-icons/io5'
 import { BiLogoTypescript } from 'react-icons/bi'
 import { TbBrandFramerMotion } from 'react-icons/tb'
-import { SiExpress, SiRender, SiZod } from 'react-icons/si'
-import { FaJsSquare, FaNodeJs, FaReact } from 'react-icons/fa'
+import { SiExpo, SiExpress, SiFastapi, SiRender, SiZod } from 'react-icons/si'
+import { FaJsSquare, FaNodeJs, FaPython, FaReact } from 'react-icons/fa'
 import { RiFirebaseFill, RiTailwindCssFill, RiVercelLine } from 'react-icons/ri'
 
 type Techs =
@@ -22,6 +22,9 @@ type Techs =
   | "JavaScript"
   | "FramerMotion"
   | "Zod"
+  | "Python"
+  | "FastAPI"
+  | "Expo"
 
 const techIcons: Record<Techs, JSX.Element> = {
   React: <FaReact size={18} color='#57dbf6' />,
@@ -36,6 +39,9 @@ const techIcons: Record<Techs, JSX.Element> = {
   JavaScript: <FaJsSquare size={18} color='#f0c02b' />,
   FramerMotion: <TbBrandFramerMotion size={18} color='#bc1af7' />,
   Zod: <SiZod size={18} color='#10047a' />,
+  Python: <FaPython size={18} color='#f0c02b' />,
+  FastAPI: <SiFastapi size={18} color='#15740b' />,
+  Expo: <SiExpo size={18} color='#050505' />
 }
 
 

@@ -23,6 +23,9 @@
   },
   "projects": {
     "title": "Projetos Desenvolvidos",
+    "bommar": {
+      "description": "Um app feito para facilitar a visualização da balneabilidade da costa do estado de Santa Catarina, Brasil. Além de oferecer relatórios de clima e maré, também conta com a visualização de mapa para melhor localização pelo usuário."
+    },
     "prepcars": {
       "description": "Uma plataforma de anúncios de carros. Fácil e simples de usar. Onde o usuário pode fazer o seu anúncio e interagir com outros anunciantes, favoritando seus carros e salvando seus preferidos."
     },

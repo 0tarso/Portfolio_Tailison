@@ -23,6 +23,9 @@
   },
   "projects": {
     "title": "Developed Projects",
+    "bommar": {
+      "description": "An app designed to make it easier to check water quality along the coast of the state of Santa Catarina, Brazil. In addition to providing weather and tide reports, it also features a map view to help users locate specific areas."
+    },
     "prepcars": {
       "description": "A car ads platform. Easy and simple to use. Where the user can make their ad and interact with other advertisers, favoriting their cars and saving their favorites."
     },

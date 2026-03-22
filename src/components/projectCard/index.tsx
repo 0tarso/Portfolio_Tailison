@@ -24,6 +24,9 @@ type Techs =
   | "JavaScript"
   | "FramerMotion"
   | "Zod"
+  | "Python"
+  | "FastAPI"
+  | "Expo"
 
 interface ProjectCardProps {
   stack: Techs[]

@@ -6,6 +6,9 @@ export default {
       writingMode: {
         'vertical-lr': 'vertical-lr',
       },
+      colors: {
+        bluePrimary: "#4085cb"
+      }
     },
   },
   plugins: [],

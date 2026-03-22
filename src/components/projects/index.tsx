@@ -9,11 +9,13 @@ import correDesign from '../../assets/corredesign.png'
 import itabaratoDesgin from '../../assets/itabaratodesign.png'
 import zkiDesign from '../../assets/zkidesign.png'
 import ultramedDesign from '../../assets/ultrameddesign.png'
+import bommarscDesign from '../../assets/bommardesign.png'
 
 
 //Components
 import Container from '../container'
 import ProjectCard from '../projectCard'
+
 
 //Framer Motion
 import { motion } from 'motion/react'
@@ -62,6 +64,24 @@ const Projects = () => {
 
 
           <ProjectCard
+            cardImg={bommarscDesign}
+            projectName='Bom Mar SC'
+            stack={['Expo', 'TypeScript', 'React', 'Vercel', 'Python', 'FastAPI']}
+            description={text('projects.bommar.description')}
+            deploymentLink='https://bommarsc.vercel.app'
+            gitHubLink='https://github.com/0tarso/Bom-Mar-SC-APP'
+          />
+
+          <ProjectCard
+            cardImg={maiconPage}
+            projectName='Maicon Luchese'
+            stack={['TypeScript', 'React', 'Tailwind', 'Vercel', 'FramerMotion']}
+            description={text('projects.maiconLandingPage.description')}
+            gitHubLink='https://github.com/0tarso/ml-landing-page'
+            deploymentLink='https://mluchese.vercel.app/'
+          />
+
+          <ProjectCard
             cardImg={prepcarsPage}
             projectName='PrepCars'
             stack={['TypeScript', 'React', 'Zod', 'Firebase', 'Tailwind', 'FramerMotion', 'Vercel']}
@@ -79,14 +99,7 @@ const Projects = () => {
             gitHubLink='https://github.com/0tarso/Encurtando--Full'
             deploymentLink='https://www.encurtando.com/'
           />
-          <ProjectCard
-            cardImg={maiconPage}
-            projectName='Maicon Luchese'
-            stack={['TypeScript', 'React', 'Tailwind', 'Vercel', 'FramerMotion']}
-            description={text('projects.maiconLandingPage.description')}
-            gitHubLink='https://github.com/0tarso/ml-landing-page'
-            deploymentLink='https://mluchese.vercel.app/'
-          />
+
 
           <ProjectCard
             cardImg={vendazenPage}
