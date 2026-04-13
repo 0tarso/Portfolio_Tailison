@@ -1,5 +1,5 @@
 //Assets
-import prepcarsPage from '../../assets/prepPag.png'
+// import prepcarsPage from '../../assets/prepPag.png'
 import portfolioPage from '../../assets/portfolioImg.png'
 import encurtandoPage from '../../assets/encurtandoPag.png'
 import maiconPage from '../../assets/maiconPag.png'
