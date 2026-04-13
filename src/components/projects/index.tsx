@@ -57,7 +57,7 @@ const Projects = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.4 }}
           style={{ willChange: "opacity" }}
-        >Web Projects
+        >Dev Projects
         </motion.span>
 
         <div className=' grid grid-cols-3 place-items-stretch gap-8 max-md:gap-2 max-xl:grid-cols-2 max-md:grid-cols-1'>
@@ -81,14 +81,14 @@ const Projects = () => {
             deploymentLink='https://mluchese.vercel.app/'
           />
 
-          <ProjectCard
+          {/* <ProjectCard
             cardImg={prepcarsPage}
             projectName='PrepCars'
             stack={['TypeScript', 'React', 'Zod', 'Firebase', 'Tailwind', 'FramerMotion', 'Vercel']}
             description={text('projects.prepcars.description')}
             deploymentLink='https://prepcars.vercel.app/'
             gitHubLink='https://github.com/0tarso/PrepCars-ReactJS'
-          />
+          /> */}
 
           <ProjectCard
             cardImg={encurtandoPage}
@@ -128,7 +128,7 @@ const Projects = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.4 }}
           style={{ willChange: "opacity" }}
-        >Social Media Projects
+        >Design
         </motion.span>
 
         <div className=' grid grid-cols-3 gap-8 gap-y-0 max-md:gap-2 max-xl:grid-cols-2 max-md:grid-cols-1'>

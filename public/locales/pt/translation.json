@@ -55,7 +55,7 @@
     "projects": "Projetos",
     "whoIam": {
       "title": "Quem sou eu?",
-      "description": "Sou desenvolvedor fullstack apaixonado por tecnologia e inovação. Estou buscando me especializar em aplicativos mobile híbridos."
+      "description": "Sou desenvolvedor fullstack apaixonado por tecnologia e inovação. Gosto de um bom café, uma boa música e unir isso a um bom momento de tirar ideias do papel."
     },
     "whatIamDoing": {
       "title": "O que estou fazendo?",
@@ -63,7 +63,7 @@
     },
     "whatAmIworkingOn": {
       "title": "No que estou trabalhando?",
-      "description": "Estou focado em aprender as melhores práticas utilizando React/Native na criação de interfaces modernas e reutilizáveis. Para a criação de projetos completos, busco conhecimento em linguagens SQL e NoSQL, como Postgres e Firebase, utilizando NodeJs no servidor."
+      "description": "Estou focado em aprender as melhores práticas utilizando React/Native na criação de interfaces modernas e reutilizáveis focadas em uma boa UI/UX. Para a criação de projetos completos, busco conhecimento em linguagens SQL e NoSQL, como Postgres e Firebase, utilizando NodeJs como base."
     }
   },
   "certifications": {

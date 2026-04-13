@@ -55,7 +55,7 @@
     "projects": "Projects",
     "whoIam": {
       "title": "Who am I?",
-      "description": "I am an aspiring full-stack developer passionate about technology and innovation."
+      "description": "I’m a full-stack developer passionate about technology and innovation. I enjoy a good cup of coffee, some great music, and combining those with the joy of bringing ideas to life."
     },
     "whatIamDoing": {
       "title": "What am I doing?",
@@ -63,7 +63,7 @@
     },
     "whatAmIworkingOn": {
       "title": "What am I working on?",
-      "description": "I am focused on learning best practices using React/Native in creating modern and reusable interfaces. For the creation of complete projects, I seek knowledge in SQL and NoSQL languages, such as Postgres and Firebase, using NodeJs on the server."
+      "description": "I am focused on learning best practices for using React Native to create modern, reusable interfaces that prioritize a strong UI/UX. To build complete projects, I am seeking knowledge of SQL and NoSQL databases, such as Postgres and Firebase, using Node.js as a foundation."
     }
   },
   "certifications": {
