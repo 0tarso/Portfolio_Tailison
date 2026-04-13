@@ -10,6 +10,7 @@ import itabaratoDesgin from '../../assets/itabaratodesign.png'
 import zkiDesign from '../../assets/zkidesign.png'
 import ultramedDesign from '../../assets/ultrameddesign.png'
 import bommarscDesign from '../../assets/bommardesign.png'
+import sebbenDesign from '../../assets/sebbenDesign.png'
 
 
 //Components
@@ -167,6 +168,14 @@ const Projects = () => {
             cardType='design'
             // description={text('projects.tailisonDev.description')}
             deploymentLink='https://drive.google.com/drive/folders/1wDfwSvQYArbwPFwZSTjNHtyieskjmi-W?usp=sharing'
+          />
+          <ProjectCard
+            cardImg={sebbenDesign}
+            projectName='Agro Sebben'
+            stack={[]}
+            cardType='design'
+            // description={text('projects.tailisonDev.description')}
+            deploymentLink='https://drive.google.com/file/d/1LiUtTaXrKHxwhrz3zp2nDeoZfKgFAZy4/view?usp=sharing'
           />
         </div>
 
