@@ -35,27 +35,6 @@ const AboutMe = () => {
     dark: ['#191919', '#2b2b2b', '#5b5b5b', '#929292', '#ededed'],
   }
 
-  // useEffect(() => {
-  //   if (!wakaData) {
-  //     fetch(`/api/wakatime`)
-  //       .then(res => res.json())
-  //       .then(dataResponse => {
-  //         const rawData = dataResponse.data.data
-  //         const wakaStats = {
-  //           dailyAverage: rawData.human_readable_daily_average.replace(/\s+/g, ""),
-  //           weekAverage: rawData.human_readable_total.replace(/\s+/g, ""),
-  //         }
-
-  //         console.log(wakaStats)
-  //         setWakaData({ ...wakaStats })
-  //         setUpdateComponent(prevState => prevState + 1)
-  //       })
-  //       .catch(error => {
-  //         console.log(error)
-  //       })
-  //   }
-  // }, [wakaData])
-
 
   return (
     <Container>
@@ -165,7 +144,6 @@ const AboutMe = () => {
 
                 <p className='text-2xl text-green-500 font-bold mt-4'>{text("about.whatAmIworkingOn.title")}</p>
                 <p className='text-xl max-md:text-lg max-sm:text-sm text-zinc-300 font-normal transition-all'>{text("about.whatAmIworkingOn.description")}</p>
-
 
               </div>
 

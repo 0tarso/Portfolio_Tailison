@@ -44,7 +44,7 @@ const ProjectCard = (props: ProjectCardProps) => {
 
   if (props.cardType === 'design') {
     return (
-      <motion.div key={props.projectName} className='bg-white rounded-2xl flex flex-col mb-24 max-sm:mb-12 transition-all  max-md:flex-col max-md:pb-4 max-md:w-[100%] border-b-4 hover:border-b-green-500 max-sm:border-b-green-500 h-fit max-sm:h-fit opacity-0'
+      <motion.div key={props.projectName} className='bg-white rounded-2xl flex flex-col mb-24 max-sm:mb-12 max-md:flex-col max-md:pb-4 max-md:w-[100%] border-b-4 hover:border-b-green-500 max-sm:border-b-green-500 h-fit max-sm:h-fit opacity-0'
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.3, }}
         style={{ willChange: "opacity" }}
@@ -71,7 +71,7 @@ const ProjectCard = (props: ProjectCardProps) => {
           </div>
 
 
-          <img src={props.cardImg} className='rounded-lg object-cover border-b-[5px] border-b-green-200 group-hover:border-green-500 transition-all duration-500 group-hover:scale-125 max-md:w-full max-sm:border-b-green-500 w-full' />
+          <img src={props.cardImg} className='rounded-lg object-cover border-b-[5px] border-b-green-200 group-hover:border-green-500 duration-500 group-hover:scale-125 max-md:w-full max-sm:border-b-green-500 w-full' />
 
         </div>
 
@@ -89,7 +89,7 @@ const ProjectCard = (props: ProjectCardProps) => {
 
   return (
 
-    <motion.div key={props.projectName} className='bg-white rounded-2xl flex flex-col mb-24 max-sm:mb-12 transition-all  max-md:flex-col max-md:pb-4 max-md:w-[100%] border-b-4 hover:border-b-green-500 max-sm:border-b-green-500 h-[650px] max-sm:h-fit opacity-0'
+    <motion.div key={props.projectName} className='bg-white rounded-2xl flex flex-col mb-24 max-sm:mb-12  max-md:flex-col max-md:pb-4 max-md:w-[100%] border-b-4 hover:border-b-green-500 max-sm:border-b-green-500 h-[650px] max-sm:h-fit opacity-0'
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.3, }}
       style={{ willChange: "opacity" }}
@@ -144,7 +144,7 @@ const ProjectCard = (props: ProjectCardProps) => {
         </div>
 
 
-        <img src={props.cardImg} className='rounded-lg object-cover border-b-[5px] border-b-green-200 group-hover:border-green-500 transition-all duration-500 group-hover:scale-125 max-md:w-full max-sm:border-b-green-500 w-full' />
+        <img src={props.cardImg} className='rounded-lg object-cover border-b-[5px] border-b-green-200 group-hover:border-green-500 duration-500 group-hover:scale-125 max-md:w-full max-sm:border-b-green-500 w-full' />
 
       </div>
 

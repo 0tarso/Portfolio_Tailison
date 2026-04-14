@@ -10,6 +10,7 @@ import Footer from './components/footer'
 import Certifications from './components/certifications'
 import NewHero from './components/newHero'
 import { ParticlesComponent } from './components/particles'
+import LinkedinFrame from './components/linkedinFrame'
 
 function App() {
 
@@ -45,6 +46,9 @@ function App() {
 
 
       <AboutMe />
+
+      <LinkedinFrame />
+
 
       <Certifications />
 

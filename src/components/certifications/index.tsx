@@ -64,7 +64,7 @@ export default function Certifications() {
                   layout='position'
                   target='_blank'
                   rel='noopener noreferer'
-                  className='hover:scale-105 transition-all bg-gradient-to-r from-green-600 to-green-500 rounded-lg p-5 w-[100%] flex flex-row items-end justify-start'>
+                  className='hover:scale-105 bg-gradient-to-r from-green-600 to-green-500 rounded-lg p-5 w-[100%] flex flex-row items-end justify-start transition-transform'>
 
                   <img src={item.imagePreview} className='w-40 h-auto bg-red-400 rounded-md max-sm:w-24' />
 
