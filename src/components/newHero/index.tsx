@@ -14,7 +14,7 @@ import { motion } from "motion/react"
 
 //Icons
 import { FaLinkedin } from 'react-icons/fa'
-import { IoArrowDownCircleOutline, IoDocumentTextOutline } from 'react-icons/io5'
+import { IoArrowDownCircleOutline } from 'react-icons/io5'
 
 //Translation texts
 import { useTranslation } from 'react-i18next'
@@ -24,8 +24,8 @@ const NewHero = () => {
 
   const [changeLayout, setChangeLayout] = useState(false)
 
-  const hrefCurriculoLink = 'https://drive.google.com/file/d/1NW0mAhZDH5ALl-s7alLm1tbyOy2VVNPG/view?usp=drive_link'
-  const downloadArquivoCurriculo = 'TailisonRamos-CV.pdf'
+  // const hrefCurriculoLink = 'https://drive.google.com/file/d/1NW0mAhZDH5ALl-s7alLm1tbyOy2VVNPG/view?usp=drive_link'
+  // const downloadArquivoCurriculo = 'TailisonRamos-CV.pdf'
 
   const hrefLinkedin = 'https://www.linkedin.com/in/tailison'
 
@@ -75,11 +75,12 @@ const NewHero = () => {
                       href={hrefLinkedin}
                       target="_blank"
                       rel='noopener noreferrer'
+                      aria-label='Link para o linkedin'
                     >{text("hero.linkedin")}
                       <FaLinkedin size={20} />
                     </a>
 
-                    <a className='w-full flex justify-center items-center bg-green-600 font-medium text-white rounded-md hover:bg-green-400 transition-all hover:scale-105 cursor-pointer'
+                    {/* <a className='w-full flex justify-center items-center bg-green-600 font-medium text-white rounded-md hover:bg-green-400 transition-all hover:scale-105 cursor-pointer'
                       href={hrefCurriculoLink}
                       download={downloadArquivoCurriculo}
                     >
@@ -88,7 +89,7 @@ const NewHero = () => {
                         {text("hero.curriculum")}
                         <IoDocumentTextOutline size={20} />
                       </button>
-                    </a>
+                    </a> */}
 
                   </div>
 
